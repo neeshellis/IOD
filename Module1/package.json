@@ -1,0 +1,22 @@
+{
+  "name": "new-rep",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000N\u0000e\u0000w\u0000-\u0000R\u0000e\u0000p\u0000\r\u0000 \u0000#\u0000 \u0000N\u0000e\u0000w\u0000-\u0000R\u0000e\u0000p\u0000\r\u0000 \u0000",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neeshellis/New-Rep.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neeshellis/New-Rep/issues"
+  },
+  "homepage": "https://github.com/neeshellis/New-Rep#readme",
+  "dependencies": {
+    "sentiment": "^5.0.2"
+  }
+}
