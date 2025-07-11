@@ -1,0 +1,45 @@
+* body {
+  font-family: sans-serif;
+  color: white;
+  margin: 0;
+}
+
+text {
+  color: rgb(114, 161, 38);
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  align-items: stretch;
+}
+
+.column {
+  background: goldenrod;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+#column1 {
+  background-image: url("images/jamesroadhero.jpg");
+}
+
+#column2 {
+  background-image: url("images/rata.jpg");
+}
+
+button {
+  background-color: rgb(175, 46, 164);
+  color: rgb(211, 197, 197);
+  padding: 10px 20px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a08345;
+}
