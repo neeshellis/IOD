@@ -21,6 +21,6 @@ function division(g, h) {
 division(100, 10);
 
 function combine(name) {
-  console.log(`Hello${name}`);
+  console.log("Hello " + name);
 }
 combine("Neesh");
