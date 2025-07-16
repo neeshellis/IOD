@@ -1,0 +1,43 @@
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        16/07/2025   8:45 PM                Neesh
+
+
+PS C:\Users\User\Documents\IOD\IOD\Module1> cd Neesh
+PS C:\Users\User\Documents\IOD\IOD\Module1\Neesh> mkdir Ellis
+
+
+    Directory: C:\Users\User\Documents\IOD\IOD\Module1\Neesh
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        16/07/2025   8:46 PM                Ellis
+
+
+PS C:\Users\User\Documents\IOD\IOD\Module1\Neesh> pwd 
+
+Path
+----
+C:\Users\User\Documents\IOD\IOD\Module1\Neesh
+
+
+PS C:\Users\User\Documents\IOD\IOD\Module1\Neesh> cd Ellis
+PS C:\Users\User\Documents\IOD\IOD\Module1\Neesh\Ellis> pwd
+
+Path
+----
+C:\Users\User\Documents\IOD\IOD\Module1\Neesh\Ellis
+
+
+PS C:\Users\User\Documents\IOD\IOD\Module1\Neesh\Ellis> cd ..
+PS C:\Users\User\Documents\IOD\IOD\Module1\Neesh> cd ..
+PS C:\Users\User\Documents\IOD\IOD\Module1> rm Neesh
+
+Confirm
+The item at C:\Users\User\Documents\IOD\IOD\Module1\Neesh has children and  
+the Recurse parameter was not specified. If you continue, all children will 
+ be removed with the item. Are you sure you want to continue?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help       
+(default is "Y"):y
+PS C:\Users\User\Documents\IOD\IOD\Module1> 
