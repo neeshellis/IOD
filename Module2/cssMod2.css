@@ -1,0 +1,79 @@
+/* body {
+  background: rgb(219, 52, 52);
+  font-family: sans-serif;
+}
+body,
+ul,
+li {
+  margin: 0;
+}
+header {
+  background: midnightblue;
+  color: white;
+}
+nav ul.menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+nav ul.menu li {
+  padding: 1em;
+}
+main {
+  max-width: 80%;
+  margin: 1em auto;
+  color:aqua
+  /* background: rgb(71, 37, 37); */
+}
+
+#content main {
+  font-size: 15px;
+  color: rgb(42, 211, 79);
+  font-weight: bold;
+}
+
+button {
+  background: hsl(240, 7%, 29%);
+  color: white;
+  font-weight: bold;
+  padding: 0.5em 1em;
+}
+
+#about button {
+  font-size: 22px;
+}
+
+#about li {
+  font-size: 10
+  px;
+}
+/ flex  */
+
+    .box {
+        padding: 20px;
+        border: 2px solid black;
+        margin: 40px;
+        width:
+            200px;
+        height: 200px;
+        text-align: center;
+    }
+
+    .content-box {
+        box-sizing: content-box;
+        background: lightblue;
+    }
+
+    .border-box {
+        box-sizing: border-box;
+        background: lightgreen;
+    }
+
+
+    body { margin: 0; font-family: sans-serif; font-size: 18px; }
+header { background: black; padding: 1em; }
+#logo { width: 60px; height: 60px; border-radius: 50%; background: #B200FF; }
+.menu { list-style: none; padding: 0; margin: 0; color: yellow; }
+main { max-width: 80%; margin: 1em auto; }
+.box { border-radius: 1em; min-width: 300px; min-height: 300px; border: 2px solid #404040; background: #B2B2B2; margin: 1em; }
