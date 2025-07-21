@@ -8,13 +8,60 @@
   <header>
     <nav>
       <!-- works like <a href="/index.html">Home</a> -->
-      <a href="/src/index.html">Home</a>
+      <a href="index.html">Home</a>
+      <br>
+      <a href="form.html">Form Page</a>
+      <br>
     </nav>
   </header>
+<br>
+  <form method="POST" action="http://127.0.0.1:5500/form.html" target="_blank">
+    <div>
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname"><br>
+    </div>
+    <div>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname"><br><br>
+    </div>
+    <input type="submit" value="Submit">
+    <br>
+    <br>
+    <div>
+  </form>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+  </div>
+  <br>
+  <br>
+  <div>
+    <input type="checkbox" id="volvo" name="fav_car" value="Volvo">
+    <label for="html">Volvo</label><br>
+    <input type="checkbox" id="rover" name="fav_car" value="Rover">
+    <label for="css">Rover</label><br>
+    <input type="checkbox" id="toyota" name="fav_car" value="Toyota">
+    <label for="toyota">Toyota</label>
+    <br>
+    <br>
 
-  <main>
+    <form>
+      <label for="cars">Choose a car:</label>
+      <br>
+      <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="rover">Rover</option>
+        <option value="toyota">Toyota</option>
+      </select>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
   </main>
-
+  <br>
+  <br>
   <footer>Copyright &copy; 2024</footer>
 </body>
 

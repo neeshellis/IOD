@@ -1,24 +1,110 @@
+article {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.style-me1 {
+  color: red;
+}
+
+#style-me2 {
+  color: blue;
+}
+
 /* I. Selectors */
+
 /* Put styles for questions 1.1, 1.2, 1.3 and 1.4 here */
+
+article {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.style-me1 {
+  color: red;
+}
+
+#style-me2 {
+  color: blue;
+}
+
+.style-me1#style-me2 {
+  color: purple;
+}
 
 /* Put styles for questions 2.1 and 2.2 here */
 
+.my-descendants-are-styled p {
+  background-color: red;
+}
+
+.my-descendants-are-styled > p {
+  background-color: lightgreen;
+}
 
 /* II. Box model and common properties */
 /* Put styles for questions 1-8 here */
 
+.box {
+  background-color: blueviolet;
+  background-image: url("img1.png");
+  background-image: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 4px;
+  border: 1px;
+  padding: 5%;
+  width: 60
+  vw;
+  height: 50vw !important;
+  border-style: solid;
+  border-color: rgb(24, 13, 83);
+  border-width: 10px;
+  box-sizing: border-box;
+  overflow: auto;
+  outline: 10px;
+  border-radius: 20%;
+}
+
+/* 2.3 the box is not responsive */
+
+
+
 
 /* III. Positioning */
 /* Put styles for questions 1-3 here */
+.position-absolute {
+    position:absolute;
+    top: 0px;
+    background-color: aquamarine;
+    left: 60px;
+    right: 50px;
+}
 
+.position-relative  {
+    position:relative;
+    background-color: darkkhaki;
+}
+
+.position-sticky  {
+    position:sticky;
+    background-color: rgb(153, 11, 19);
+    top: 5%;
+}
+/* Put styles for questions 1-3 here */
 
 /* IV. Styling text */
-/* Put styles for questions 1-10 here */
 
+
+
+
+
+/* Put styles for questions 1-10 here */
 
 /* V. Styling links */
 /* Put styles for questions 1-3 here */
-
 
 /* VI. calc() */
 /* Put styles for questions 1-3 here */
