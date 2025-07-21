@@ -56,8 +56,7 @@ article {
   margin: 4px;
   border: 1px;
   padding: 5%;
-  width: 60
-  vw;
+  width: 60 vw;
   height: 50vw !important;
   border-style: solid;
   border-color: rgb(24, 13, 83);
@@ -70,41 +69,84 @@ article {
 
 /* 2.3 the box is not responsive */
 
-
-
-
 /* III. Positioning */
 /* Put styles for questions 1-3 here */
+
 .position-absolute {
-    position:absolute;
-    top: 0px;
-    background-color: aquamarine;
-    left: 60px;
-    right: 50px;
+  position: absolute;
+  top: 0px;
+  background-color: aquamarine;
+  left: 60px;
+  right: 50px;
 }
 
-.position-relative  {
-    position:relative;
-    background-color: darkkhaki;
+.position-relative {
+  position: relative;
+  background-color: darkkhaki;
 }
 
-.position-sticky  {
-    position:sticky;
-    background-color: rgb(153, 11, 19);
-    top: 5%;
+.position-sticky {
+  position: sticky;
+  background-color: rgb(153, 11, 19);
+  top: 5%;
 }
-/* Put styles for questions 1-3 here */
 
 /* IV. Styling text */
-
-
-
-
-
 /* Put styles for questions 1-10 here */
+.text-style {
+  color: red;
+  font-size: 14px;
+  line-height: 100%;
+  font-weight: normal;
+  font-family: "Bitcount Grid Single", sans-serif;
+  text-align: center;
+  letter-spacing: 3px;
+  word-spacing: 10px;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
 
 /* V. Styling links */
 /* Put styles for questions 1-3 here */
 
+
+a:link {
+      color: grey;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+a:hover, a:active, a:focus {
+      color: brown;
+      font-size: 20px;
+      font-weight: 900;
+      text-decoration: overline;
+    }
+
+a:visited {
+      color: rgb(42, 91, 165);
+      font-size: 20px;
+      font-weight: 900;
+      text-decoration: overline;
+      font-style:italic;
+    }
+
 /* VI. calc() */
 /* Put styles for questions 1-3 here */
+
+.calc-style {
+  width: calc(100vw - 100px);
+  background-color: lightgray;
+
+}
+
+.fixed-width-col  {
+  width: 350px
+  display: inline-block;
+}
+
+.fluid-col  {
+  width: calc(100% - 350px)
+  display: inline-block;
+}
