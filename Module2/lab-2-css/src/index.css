@@ -141,7 +141,7 @@ a:visited {
 }
 
 .fixed-width-col  {
-  width: 350px;
+  width: calc(100vw - 350px);
   display: inline-block;
 }
 
