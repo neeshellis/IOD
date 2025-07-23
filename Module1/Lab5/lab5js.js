@@ -5,16 +5,20 @@ console.log(oceans[2]);
 console.log(oceans[3]);
 console.log(oceans[4]);
 
-oceans[1] = "Antartic";
+// replace the value of elements at position 1 and 4
+
+oceans[0] = "Antartic";
 console.log(oceans);
 
-oceans[4] = "Indian";
+oceans[3] = "Indian";
 console.log(oceans);
 
+// Adding a new element
 console.log(oceans);
 oceans.push("Blue");
 console.log(oceans);
 
+// removing an element
 let lastOcean = oceans.pop();
 console.log(lastOcean); // Blue
 console.log(oceans);
