@@ -114,11 +114,18 @@ const inigo = {
   let greeting = `Hello ${person.name}, my name is ${this.firstName} ${this.lastName} `;
   console.log(greeting + this.getCatchPhrase(person));
 }, 
-getCatchPhrase(person) {
-    if (person.numFingers = 6) {
-    return ;
-  }
+// getCatchPhrase(person) {
+//     if (person.numFingers == 6) {
+//     return "You killed my father. Prepare to die.";
+//   }
+//     return "Nice to meet you.";
+// }
 }
-}
-console.log (greeting + "You killed my father. Prepare to die.")
+const getCatchPhrase = (person.numFingers != 6) => console.log("Nice to meet you.")
+const getCatchPhrase = (person.numFingers == 6) => console.log("You killed my father. Prepare to die.")
 
+// 
+// console.log( 0 ? 'zero is true' : 'zero is false' ) // zero is false
+
+inigo.greeting(westley)
+inigo.greeting(rugen)
