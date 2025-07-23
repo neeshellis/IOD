@@ -2,13 +2,17 @@
 <html>
 
 <head>
+  <!-- Step II -->
+  <title>Index Module 2 Lab 1</title>
+
+  <!-- Step II.1 -->
   <meta charset="UTF-8">
   <meta name="description" content="Module 2 HTML">
   <meta name="keywords" content="HTML, CSS, JavaScript Tutorial">
   <meta name="author" content="Neesh Ellis">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <nav><a href="form.html">Form Page</a></nav>
-  <title>Index Module 2 Lab 1</title>
+
   <style>
     table,
     th,
@@ -17,6 +21,8 @@
     }
   </style>
 </head>
+
+<!-- Steps III -->
 
 <body>
   <h1>My HTML learning journey</h1>
@@ -37,25 +43,30 @@
     </fixed-width>
   </pre>
 
+    <!-- undordered list -->
     <ul>
       <li>Jake</li>
       <li>Ferg</li>
       <li>Lilly</li>
       <li>Billie</li>
     </ul>
+
+    <!-- ordered list and nested lists -->
     <ol>
       <li>Jake</li>
       <ul>basketball</ul>
       <ul>tennis</ul>
       <li>Ferg</li>
-      <ol>cricket</ol>
-      <ol>rugby</ol>
-      <li>Lilly</li>
-      <ol>touch</ol>
-      <ol>rowing</ol>
+      <ul>cricket
     </ol>
+    <ul>rugby</ol>
+      <li>Lilly</li>
+      <ul>touch</ol>
+        <ul>rowing</ol>
+          </ol>
   </article>
 
+  <!--Steps IV -->
   <article>
     <h2 id="article2">Tables - table, thead, tbody, tr, td, th</h2>
     <table>
@@ -63,7 +74,6 @@
         <tr>
           <th colspan="2">First Header</th>
           <th>Second Header</th>
-
         </tr>
       </thead>
       <tbody>
@@ -73,36 +83,41 @@
           <td>Third Cell - first row</td>
         </tr>
         <tr>
-          <td>First cell - second row</td>
+          <td rowspan="2">First cell - second row</td>
           <td>Second cell - second row</td>
           <td>Third cell - second row</td>
         </tr>
         <tr>
           <td>First cell - third row</td>
-          <td rowspan="2">Second cell - third row</td>
+          <td>Second cell - third row</td>
+          <td>Third cell - third row</td>
         </tr>
         </tfoot>
     </table>
   </article>
 
+  <!-- Steps V -->
   <article>
     <h2 id="article3">HTML elements - img, video, audio</h2>
-    <img
-      src="https://c02.purpledshub.com/uploads/sites/62/2023/07/GettyImages-a0078-000010-ead6a3b.jpg?w=728&webp=1"
-      alt="A picture of Picsum"  width="600" height="400"/>
-    <img src="assets/html_lab_image.jpg" alt="Image from the Lab Material" width="600" height="400"/>
-<br>
-   <video controls autoplay width="250">
-    <source src="/assets/flower.webm" type="video/webm">
-    Sorry, your browser doesn't support embedded videos.
-   </video>
-   <figure>
-    <figcaption>This is an audio control</figcaption> 
-    <audio controls autoplay src="/assets/t-rex-roar.mp3">
-     Your browser does not support the <code>audio</code> element.
-     </figure>
+    <img src="https://c02.purpledshub.com/uploads/sites/62/2023/07/GettyImages-a0078-000010-ead6a3b.jpg?w=728&webp=1"
+      alt="A picture of Spider Web" width="600" height="400" />
+    <img src="assets/html_lab_image.jpg" alt="Image from the Lab Material" width="600" height="400" />
+    <br>
+    <video controls autoplay width="250">
+      <source src="./assets/flower.webm" type="video/webm">
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+    <figure>
+      <figcaption>This is an audio control of TRex Roar</figcaption>
+      <audio controls autoplay src="./assets/t-rex-roar.mp3">
+      
+        Your browser does not support the <code>audio</code> element.
+    </figure>
     </audio>
   </article>
+
+
+  <!-- Steps VI -->
   <header>
     <nav>
       <!-- works like <a href="/index.html">Home</a> -->
