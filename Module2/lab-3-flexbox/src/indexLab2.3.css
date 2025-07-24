@@ -70,12 +70,12 @@ a {
 .flex-space-between {
   justify-content: space-between;
   /* justify-content: center;  */
-  
 }
 
 .flex-basis-item-50 {
   flex-wrap: wrap;
   flex-basis: 50%;
+  /* flex-basis: 25%; */
 }
 
 .flex-wrap {
@@ -90,17 +90,16 @@ a {
   justify-content: center;
 }
 
-
-
 .flex-menu li {
   display: flex;
   margin: 0.5em;
   padding: 2px;
   flex-grow: 10;
   justify-content: center;
+  font-weight: bold;
 }
 
-.fourth-item  {
+.flex-menu .fourth-item  {
 order: 5;
 
 }
