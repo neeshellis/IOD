@@ -112,21 +112,134 @@
 //   firstName: "Inigo",
 //   lastName: "Montoya",
 //   greeting(person) {
-//   let greeting = `Hello ${person.name}, my name is ${this.firstName} ${this.lastName} `;
-//   console.log(greeting + this.getCatchPhrase(person));
-// }, 
-// // getCatchPhrase(person) {
-// //     if (person.numFingers == 6) {
-// //     return "You killed my father. Prepare to die.";
-// //   }
-// //     return "Nice to meet you.";
-// // }
-// }
-// const getCatchPhrase = (person.numFingers != 6) => console.log("Nice to meet you.")
-// const getCatchPhrase = (person.numFingers == 6) => console.log("You killed my father. Prepare to die.")
-
-// // 
-// // console.log( 0 ? 'zero is true' : 'zero is false' ) // zero is false
+//     let greeting = `Hello ${person.name}, my name is ${this.firstName} ${this.lastName} `;
+//     console.log(greeting + this.getCatchPhrase(person));
+//   },
+//   getCatchPhrase(person) {
+//     if (person.numFingers == 6) {
+//       return "You killed my father. Prepare to die.";
+//     }
+//     return "Nice to meet you.";
+//   }
+// };
 
 // inigo.greeting(westley)
 // inigo.greeting(rugen)
+
+// const getCatchPhrase = (person) => console.log(person.numFingers == 6 ? "You killed my father. Prepare to die." : "Nice to meet you.");
+
+// 7
+
+// const basketballGame = { 
+//   score: 0, 
+//   freeThrow() { 
+//     this.score++; 
+//     return this;
+//   }, 
+//   basket() { 
+//    this.score += 2; 
+//    return this;
+//   }, 
+//   threePointer() { 
+//     console.log('This score is '+this.score);
+//     this.score += 3; 
+    
+//     return this;
+//   }, 
+//   halfTime() { 
+//     console.log('Halftime score is '+this.score); 
+//     return this;
+//   } 
+// } 
+
+
+// basketballGame.freeThrow().basket().threePointer().halfTime();
+
+// //modify each of the above object methods to enable function chaining as below: basketballGame.basket().freeThrow().freeThrow().basket().threePointer().halfTime();
+// //8
+
+// const sydney = { 
+//   name: 'Sydney', 
+//   population: 5_121_000, 
+//   state: 'NSW', 
+//   founded: '26 January 1788', 
+//   timezone: 'Australia/Sydney' 
+// }
+
+// for (let key in sydney) {
+//   console.log('key: ' + key);
+//   console.log('value: ' + sydney[key]);
+// }
+
+// const london = { 
+//   name: 'London', 
+//   population: 70_121_000, 
+//   state: 'London City', 
+//   founded: '1000 BC', 
+//   timezone: 'London/GMT' 
+// }
+
+// for (let key in london) {
+//   console.log('key: ' + key);
+//   console.log('value: ' + london[key]);
+// }
+
+
+//9
+// let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
+// let dog1 = 'Bingo';
+// const cat1 = { name: 'Fluffy', breed: 'Siberian' };
+
+
+// // let moreSports2 = [teamSports] 
+ 
+
+// let moreSports2 = [...teamSports];
+//  moreSports2.push( "Lacrosse" , "Football");
+//  moreSports2.unshift( "Rugby");
+
+
+// let dog2 = dog1;
+// dog2 = "Billie";
+
+// let cat2 = {...cat1}; 
+// cat2.name = "Jerry"
+
+
+// console.log(teamSports,dog1,cat1) //teamSports is now equal to moreSports2, cat1 is now Jerry, 
+// console.log(cat2.name)
+// console.log(moreSports2)
+
+
+function Person(name, age) { 
+    this.name = name; 
+    this.age = age; 
+    this.human = true; 
+    this.canDrive = () => console.log(this.age >= 18 ? 'Can drive': "Can't drive");
+    }
+
+let person1 = new Person('John', '50');
+person1.canDrive() 
+
+let person2 = new Person('Jane', '17');
+person2.canDrive()
+
+
+
+class PersonClass {
+ constructor(name, age) {
+   this.name = name;
+   this.age = age;
+ }
+canDrive() {
+   return this.age >= 18 ? 'Can drive': "Can't drive"
+
+}
+}
+let person3 = new PersonClass('Jimmy', '90')
+
+console.log(person3.canDrive())
+
+
+
+

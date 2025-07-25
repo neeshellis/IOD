@@ -10,7 +10,7 @@ console.log(oceans[4]);
 oceans[0] = "Antartic";
 console.log(oceans);
 
-oceans[3] = "Indian";
+oceans[] = "Indian";
 console.log(oceans);
 
 // Adding a new element
