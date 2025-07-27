@@ -998,6 +998,11 @@ section,
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
+.resume.page-color  {
+  background-color: #b6c870;
+}
+
+
 .resume .resume-title {
   color: var(--heading-color);
   font-size: 26px;
