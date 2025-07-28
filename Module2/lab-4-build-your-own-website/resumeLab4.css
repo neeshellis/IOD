@@ -2,11 +2,11 @@
 
 .resume-page {
   height: 100vh;
-  margin: 0;
+  margin-left: auto;
   background: linear-gradient(#f05178, #fe86e3, #b6c870, #969393);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 20px;
+  padding: 10px 10px 10px 10px;
  font-family: Raleway, sans-serif;
 }
 
@@ -22,23 +22,32 @@
 h1 {
  color: hsl(0, 0%, 20%);
   font-family: Raleway, sans-serif;
-  font-size: 44px;
+  font-size: 60px;
   font-weight: 700;
 }
 
 h2 {
   color: hsl(0, 0%, 20%);;
   font-family: Raleway, sans-serif;
-  font-size: 35px;
+  font-size: 28px;
   font-weight: 350;
 }
 
 h3 {
   color: hsl(0, 0%, 20%);
   font-family: Raleway, sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
   padding-left: 20px;
+}
+
+h4 {
+  color: hsl(0, 0%, 20%);
+  font-family: Raleway, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-weight: bold;
+  line-height: .5;
 }
 
 p {
@@ -56,24 +65,25 @@ p {
   font-family: Raleway, sans-serif;
   font-size: 36px;
   font-weight: 500;
+  padding-block: 30px 30px;
 }
 
 .ve-2 {
   text-align: center;
   color: hsl(0, 0%, 20%);
   font-family: Raleway, sans-serif;
-  font-size: 25px;
   font-weight: 350
+    
 }
 
 .personal {
-  text-align: center;
-  padding-top: 30px;
-  margin-bottom: 35px;
-  color: hsl(0, 0%, 20%);
+  text-align:justify;  
+  margin: 20px 20px 20px 20px;
+  padding: 10px 10px 10px 10px;
+  color: hsl(0, 54%, 97%);
   font-family: Raleway, sans-serif;
-  font-size: 15px;
-  font-weight: 300
+  font-size: 16px;
+  font-weight: 300;
 }
 
 /* flex box */
@@ -83,22 +93,21 @@ p {
    flex-wrap: wrap;
    flex-direction: column;
    background-color: rgba(255, 255, 255, .3); 
-   width: 95%;
+   width: 100%;
    padding: 10px 15px 10px 15px;
    margin-bottom: 10px;
    margin: right 5% auto
+   margin: left 5% auto
 } 
 
 .flex-container  div {
-     display: flex;
-   flex-wrap: wrap;
-  background-color: rgba(255, 255, 255, .6);
+  background-color: rgba(255, 255, 255, .5);
   padding: 15px 20px 15px 20px;
   margin: 10px;
   margin: right auto;
-  border-radius: 5px;
-  padding-block: 5px;  
+  border-radius: 10px;
+  padding-block: 5px 5px 5px 5px
   width: 93%;
-    line-height: 20px;
-    font-size: 13px;
+  line-height: 20px;
+  font-size: 14px;
   }
