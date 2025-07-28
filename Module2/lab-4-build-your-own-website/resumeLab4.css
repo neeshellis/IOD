@@ -78,12 +78,12 @@ p {
 
 .personal {
   text-align:justify;  
-  margin: 20px 20px 20px 20px;
+  margin: 20px 20px 20px 30px;
   padding: 10px 10px 10px 10px;
   color: hsl(0, 54%, 97%);
   font-family: Raleway, sans-serif;
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 15px;
+  font-weight: 520;
 }
 
 /* flex box */
@@ -93,21 +93,25 @@ p {
    flex-wrap: wrap;
    flex-direction: column;
    background-color: rgba(255, 255, 255, .3); 
-   width: 100%;
+   width: 97%;
    padding: 10px 15px 10px 15px;
-   margin-bottom: 10px;
-   margin: right 5% auto
-   margin: left 5% auto
+   margin: 15px 15px 15px 15px;
+   border-radius: 10px;
+   margin: right 5% auto;  
+   /* margin: left 5% auto;  */
 } 
 
 .flex-container  div {
+  display: flex;
+  flex-wrap: wrap;
   background-color: rgba(255, 255, 255, .5);
-  padding: 15px 20px 15px 20px;
-  margin: 10px;
+  padding: 10px 20px 15px 20px;
+  padding:auto;
+  box-shadow: #969393 0px 0px 10px;
+  margin: 20px; 
   margin: right auto;
   border-radius: 10px;
-  padding-block: 5px 5px 5px 5px
-  width: 93%;
+  width: 92%;
   line-height: 20px;
   font-size: 14px;
   }
