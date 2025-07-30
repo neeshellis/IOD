@@ -413,7 +413,7 @@
 
 // for Sets and Maps you can use 'has' 'delete' 'pushes'
 
-// page 52 Caching using Maps - helpful for retrieving and storing data on your local computer
+// page 51 Caching using Maps - helpful for retrieving and storing data on your local computer
 
 // // Simulate fetching external data, which can be slow
 // function fetchExternalData(id) {
@@ -424,42 +424,180 @@
 
 // Create a Map for caching - when fetching or keeping Data from an external database
 // Simulate fetching external data, which can be slow
-function fetchExternalData(id) {
-console.log(`Fetching data for ID: ${id}`);
-const fetchedData = `Data for ID: ${id}`; // Simulated data
-return fetchedData;
+// 
+// 
+// const names = new Set(['Pedro', 'Oliver', 'Jack', 'Mateo'])
+
+// console.log( names.delete('Jack') ) // true - successful delete
+// console.log( names.has('Jack') ) // false - Jack no longer exists in set
+// console.log( names.has('Mateo') ) // true - Mateo does exist in set
+// names.clear()
+// console.log(names) // Set(0) {}
+
+// Page 59
+
+// 
+// const [jcFirst, jcLast, , , jcPlace] = ['Julius', 'Caesar', 'Consul', 'of the', 'Roman', 'Republic']
+// console.log(`${jcFirst} ${jcLast} is a ${jcPlace}`) // Julius Caesar is a Roman
+
+
+// const [a, b, c] = "abc" // strings are iterable, so can break into characters
+// const [ one, two, three ] = new Set([1, 2, 3]) // Sets are iterable, so can be destructured
+// const [ [type, quantity] ] = new Map([ ['apple', 4] ]) // Maps are iterable too
+// // now we have 8 individual variables: a, b, c, one, two, three, type, quantity
+// console.log(a, b, c, one, two, three, type, quantity) // a b c 1 2 3 apple 4
+
+// const monarch = {}; // empty object
+// [ monarch.title, monarch.name, monarch.sex ] = "King Charles boy".split(' '); // store array pieces in object properties
+// console.log(monarch); // { title: 'King', name: 'Charles' }
+
+// const teeProduct = { id: 1, title: 'Sleeveless Tee', price: 23.95, category: 'Shirts' }
+// // key and value are just variable names, could be anything
+// for (let [key, value] of Object.entries(teeProduct)) {
+// console.log(`${key}: ${value}`) // id: 1, title: Sleeveless Tee, price: 23.95 ...
+// }
+
+// let student = 'James', teacher = 'Andrew';
+// [student, teacher] = [teacher, student]
+
+// console.log(student) // Andrew
+// console.log(teacher) // James
+
+// const [jcFirst, jcLast, ...jcTitles] = ['Julius', 'Caesar', 'Consul', 'of the', 'Roman', 'Republic']
+// console.log( jcTitles ) // [ 'Consul', 'of the', 'Roman', 'Republic' ]
+// console.log( jcTitles.length ) // 3
+
+// const [jcFirst, jcLast, ...jcTitles] = ['Julius', 'Caesar', 'Consul', 'of the', 'Roman', 'Republic']
+// console.log( jcTitles ) // [ 'Consul', 'of the', 'Roman', 'Republic' ]
+// console.log( jcTitles.length ) // 4
+
+// // property names (keys) on right are matched to variable names on left
+// let { width, height, title } = { title: 'My Component', height: 100, width: 200 }
+// console.log(width, height, title) // 200 100 My Component
+
+// let { width = 200, height = 100, title} = { title: 'My Component' }
+// console.log(width, height, title) // 200 100 My Component
+
+// function displayComponent({height = 200, width = 100, title}) {
+// console.log(`<div style="width:${width}px; height:${height}px"><h2>${title}</h2></div>`)
+// }
+
+// displayComponent({width:200, title:'My Awesome Component'})
+// displayComponent({title:'My Amazing Component'})
+// displayComponent({width:300, height:300, title:'My Average Component'})
+
+// let options = { width: 200, height: 100, title: 'My Component' }
+// let { title, ...rest } = options
+// console.log(title) // My Component
+// console.log(rest) // { width: 200, height: 100 }
+
+// const now = new Date()
+// console.log( now ) // 2025-07-28T23:59:36.411Z
+// console.log( +now ) // 1753747176411 - number of milliseconds since epoch
+
+
+// const epoch = new Date(0) // 0 milliseconds since Jan 1 1970
+// const jan2_1970 = new Date(1000 * 60 * 60 * 24) // a full day in milliseconds after Jan 1
+// console.log(epoch) // 1970-01-01T00:00:00.000Z
+// console.log(jan2_1970) // 1970-01-02T00:00:00.000Z
+
+// const christmas = new Date('2023-12-25') // assumes UTC timezone if time not included
+// console.log(christmas) // 2023-12-25T00:00:00.000Z - Z indicates UTC timezone, GMT+0
+
+// const nyeLocal = new Date('2023-12-31 23:59:59') // assumes local timezone if time is included
+// const nyeUTC = new Date('2023-12-31 23:59:59+00:00') // specific timezone specified (UTC)
+// console.log(nyeLocal) // 2023-12-31T13:59:59.000Z - stored internally as UTC so now hours are different
+// console.log(nyeUTC) // 2023-12-31T23:59:59.000Z - UTC before midnight, no longer local timezone
+
+// const boxingDay = new Date(2023, 11, 26) // month 11 is December, assumes local timezone
+// console.log(boxingDay) // 2023-12-25T14:00:00.000Z - so hours are different in UTC
+
+// const remembranceDay = new Date( 2023, 10, 11, 11, 11 ) // month 10 is November, assumes local timezone
+// console.log(remembranceDay) // 2023-11-11T01:11:00.000Z - so hours are different in UTC
+
+// const christmas = new Date('2023-12-25') // assumes UTC timezone if time not included
+// console.log( christmas.toLocaleDateString() ) // 25/12/2023 - dd/mm/yyyy if in Australia/NZ
+// console.log( christmas.toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' }) )
+// // 2023. 12. 25. 오전 9:00:00 - both timezone and language are converted to Korean
+
+// const nyeLocal = new Date('2023-12-31 23:59:59') // assumes local timezone if time is included
+// console.log( nyeLocal.toLocaleString() ) // 31/12/2023, 11:59:59 pm - default to local TZ
+
+// const student = {
+// name: 'Sita',
+// age: 28,
+// courses: ['HTML', 'CSS', 'JS'],
+// occupation: null
+// }
+// console.log( JSON.stringify(student) )
+// //{"name":"Sita","age":28,"courses":["HTML","CSS","JS"],"occupation":null}
+
+// const book = {
+// title: "Gone With The Wind",
+// printTitle() { // ignored
+// console.log(this.title)
+// },
+// releaseDate: undefined // ignored
+// }
+
+// console.log(JSON.stringify(book)) // {"title":"Gone With The Wind"}
+
+// page 74 JSON replacing values
+
+// const room = {
+// number: 23
+// }
+// const meetup = {
+// title: "Strategy Conference",
+// participants: ['Chris', 'Tina'],
+// }
+
+// meetup.place = room; // meetup references room
+// room.occupiedBy = meetup; // room references meetup
+
+// // JSON.stringify(meetup); // TypeError: Converting circular structure to JSON
+
+// // console.log( JSON.stringify(meetup, ['title', 'participants']) ); // just stringify the properties in
+// // the array: {"title":"Strategy Conference","participants":["Chris","Tina"]}
+
+// console.log( JSON.stringify(meetup, function(key, value) {
+// if (key != '' && value == meetup) return undefined // skip references to current object
+// else if (typeof value == 'function') return value.toString() // stringify functions
+// return value // otherwise return original value unchanged
+// }, 2) ); // use 2 spaces for nicer formatting
+
+// 
+// page 76 JSON parse
+
+// const meetup = {
+// title: "Strategy Conference", participants: ['Chris', 'Tina'], date: '2023-06-01'
+// }
+// const meetupString = JSON.stringify(meetup) // convert object to string
+// const meetupParsed = JSON.parse(meetupString, (key, value) => { // convert string to object
+// if ( !isNaN(Date.parse(value)) ) return new Date(value) // if valid date, create Date object
+// return value;
+// })
+// console.log(meetupParsed) // { title, participants: (as above), date: 2023-06-01T00:00:00.000Z }
+
+// const box1 = {
+// size: 'large',
+// dimensions: { width: 50, length: 70, height: 30, units: 'cm' },
+// items: [ 'glasses', 'plates', 'cutlery' ]
+// }
+// const boxString = JSON.stringify(box1) // convert object to string
+// const box2 = JSON.parse(boxString) // convert string back to new object
+// // how could we check to make sure both boxes are the same but independent?
+
+const box1 = {
+size: 'large',
+dimensions: { width: 50, length: 70, height: 30, units: 'cm' },
+items: [ 'glasses', 'plates', 'cutlery' ]
 }
-// Create a Map for caching
-const cache = new Map();
-function getCachedData(id) {
-
-// Check if data is already in the cache
-if (cache.has(id)) {
-return cache.get(id); // return cached value, no expensive lookup
-}
-
-// If not in cache, fetch "external" data and store in cache for next time
-const fetchedData = fetchExternalData(id);
-cache.set(id, fetchedData);
-return fetchedData;
-}
-// Example usage
-console.log('#1: ' + getCachedData(4)); // First time: fetches "external" data and caches result
-console.log('#2: ' + getCachedData(4)); // Other times: can fetch result from cache, much faster
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const boxString = JSON.stringify(box1) // convert object to string
+const box2 = JSON.parse(boxString) // convert string back to new object
+// how could we check to make sure both boxes are the same but independent?
+console.log(boxString)
+console.log(box2)
 
 
 

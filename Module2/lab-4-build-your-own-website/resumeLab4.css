@@ -36,26 +36,27 @@ h2 {
 h3 {
   color: hsl(0, 0%, 20%);
   font-family: Raleway, sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
   padding-left: 20px;
+  margin-bottom: -1%
 }
 
 h4 {
   color: hsl(0, 0%, 20%);
   font-family: Raleway, sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  font-weight: bold;
+  font-size: 17px;
+  font-weight: 600;
+  /* font-weight: bold; */
   line-height: .5;
 }
 
 p {
   margin: 10px;
-  padding-left: 20px;
+  padding: 20px;
   font-family: Raleway, sans-serif;
-  font-size: 16px;
-  color: hsl(0, 0%, 20%);
+  font-size: 5
+  color:  hsl(0, 0%, 20%);
 } 
 
 .ve-1 {
@@ -72,21 +73,24 @@ p {
   text-align: center;
   color: hsl(0, 0%, 20%);
   font-family: Raleway, sans-serif;
-  font-weight: 350
-    
+  font-weight: 200   
 }
+
+a:link {
+      color: hsl(0, 0%, 98%);
+      font-size: 15px;
+      text-decoration: underline;
+    }
 
 .personal {
-  text-align:justify;  
-  margin: 20px 20px 20px 30px;
-  padding: 10px 10px 10px 10px;
-  color: hsl(0, 54%, 97%);
+  text-align:center;   
+  margin: 
+  padding: 5px 20px 5px 20px;
+  /* background-color: rgba(255, 255, 255, .5); */
   font-family: Raleway, sans-serif;
   font-size: 15px;
-  font-weight: 520;
-}
-
-/* flex box */
+  font-weight: 500;
+} 
 
 .flex-container {
    display: flex;
@@ -94,14 +98,31 @@ p {
    flex-direction: column;
    background-color: rgba(255, 255, 255, .3); 
    width: 97%;
-   padding: 10px 15px 10px 15px;
-   margin: 15px 15px 15px 15px;
+   padding: 2%;
    border-radius: 10px;
-   margin: right 5% auto;  
-   /* margin: left 5% auto;  */
+   box-shadow: #969393 0px 0px 10px;
+   
 } 
 
-.flex-container  div {
+.flex-menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 5px;
+  margin: 20px; 10px; 20px; 10px;
+  background-color: rgba(255, 255, 255, .5);
+  box-shadow: #969393;
+  border-radius: 10px;
+  width: 92%;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+/* .background {} */
+
+
+
+/* .flex-container  div {
   display: flex;
   flex-wrap: wrap;
   background-color: rgba(255, 255, 255, .5);
@@ -114,4 +135,4 @@ p {
   width: 92%;
   line-height: 20px;
   font-size: 14px;
-  }
+  } */
