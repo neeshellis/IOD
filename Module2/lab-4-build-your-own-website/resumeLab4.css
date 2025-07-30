@@ -1,9 +1,9 @@
 /*  Page design*/
 
 .resume-page {
-  height: 100vh;
+  height: 80vh;
   margin-left: auto;
-  background: linear-gradient(#f05178, #fe86e3, #b6c870, #969393);
+  background: linear-gradient(#f05178cc, #fe86e3cc, #b6c870cc, #969393cc);
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 10px 10px 10px 10px;
@@ -16,7 +16,8 @@
   font-family: Raleway, sans-serif;
   font-size: 44px;
   font-weight: 700;
-  padding-top: 20%;
+  padding-top: 8%;
+  margin-bottom: -5px;
 }
 
 h1 {
@@ -24,6 +25,7 @@ h1 {
   font-family: Raleway, sans-serif;
   font-size: 60px;
   font-weight: 700;
+  
 }
 
 h2 {
@@ -45,18 +47,19 @@ h3 {
 h4 {
   color: hsl(0, 0%, 20%);
   font-family: Raleway, sans-serif;
-  font-size: 17px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   /* font-weight: bold; */
-  line-height: .5;
+  line-height: .1;
+  word-spacing: 2px;
+  
 }
 
 p {
   margin: 10px;
   padding: 20px;
   font-family: Raleway, sans-serif;
-  font-size: 5
-  color:  hsl(0, 0%, 20%);
+  color:  hsl(300, 21%, 22%);
 } 
 
 .ve-1 {
@@ -67,6 +70,7 @@ p {
   font-size: 36px;
   font-weight: 500;
   padding-block: 30px 30px;
+  
 }
 
 .ve-2 {
@@ -74,6 +78,8 @@ p {
   color: hsl(0, 0%, 20%);
   font-family: Raleway, sans-serif;
   font-weight: 200   
+  letter-spacing: 1em;
+  text-height: 0.5em
 }
 
 a:link {
@@ -83,13 +89,14 @@ a:link {
     }
 
 .personal {
-  text-align:center;   
-  margin: 
+  text-align:justify;   
   padding: 5px 20px 5px 20px;
-  /* background-color: rgba(255, 255, 255, .5); */
   font-family: Raleway, sans-serif;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: .3px;
+  word-spacing: 2px;
+  font-style: italic;
 } 
 
 .flex-container {
@@ -100,8 +107,7 @@ a:link {
    width: 97%;
    padding: 2%;
    border-radius: 10px;
-   box-shadow: #969393 0px 0px 10px;
-   
+   box-shadow: #969393 0px 0px 10px;   
 } 
 
 .flex-menu {
@@ -110,7 +116,7 @@ a:link {
   list-style: none;
   padding: 5px;
   margin: 20px; 10px; 20px; 10px;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, .2);
   box-shadow: #969393;
   border-radius: 10px;
   width: 92%;
@@ -118,6 +124,12 @@ a:link {
   font-size: 14px;
 }
 
+.flex-container h3 {
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: hsl(0, 0%, 20%); 
+}
 /* .background {} */
 
 

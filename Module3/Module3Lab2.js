@@ -9,16 +9,15 @@
 // let sliceArray = splitArray.map(answer => answer.slice(1,answer.length))
 // let getUppercharacters = splitArray.map(answer => answer.charAt(0).toUpperCase() + answer.slice(1,answer.length))
 // return getUppercharacters
-    
+
 // }
 
 // console.log(startCapital(sentence))
 
-
 // 2
 // created a variable called statement which is equal to 'This text will be truncated if it is too long';
 
-// const statement = 'This text will be truncated if it is too long';  
+// const statement = 'This text will be truncated if it is too long';
 
 // function truncate(str, max) {
 //     if (str.length > max) {
@@ -40,13 +39,11 @@
 // }
 // console.log(truncate('Merry Christmas', 15))
 
-
 //3 a-c)
-const animals = ['Tiger', 'Giraffe'];
-animals.push('Lion', 'Leopard');
-animals.unshift('Cheetah')
-animals.sort()
-
+// const animals = ['Tiger', 'Giraffe'];
+// animals.push('Lion', 'Leopard');
+// animals.unshift('Cheetah')
+// animals.sort()
 
 // d)
 
@@ -57,8 +54,6 @@ animals.sort()
 //  newValue = animals.splice(2, 1, "Snake");
 // console.log(animals)
 // }
- 
-
 
 // //  e)
 // function findMatchingAnimals(beginsWith)  {
@@ -68,35 +63,72 @@ animals.sort()
 // }
 // console.log(findMatchingAnimals("l"))
 
-
-
-
-
-
 // 4
+// function camelCase(cssProp) {
+//     // console.log(cssProp)
+//     let words = cssProp.split('-'); // splitting string into array
+//     // console.log(words)
+//     let camelString = '' // has a length of 0
+//     words.forEach(
+//         word => {//first word is margin, second is left
+//             if (camelString.length == 0 ) {//camelstring length is 0 so true
+//                 camelString = word
+//             }
+//             else {//camelstring is now margin, length not 0
+//                 camelString += word.charAt(0).toUpperCase() //concat margin
+//                 + word.substring(1) //with capital l and concat word - lowercase l
+//             }
+//         }
+//     )
+//     return camelString //return camelcased word
+// }
+//  console.log(camelCase('margin-left'))
+// console.log(camelCase('background-image'))
+// console.log(camelCase('margin-top'))
 
-const css = ['margin-left', 'margin-right', 'font-color', 'font-background']
 
-function camelCase(cssPro) {
+//  for loop
+function camelCase(cssProp) {
+    let csswords = cssProp.split('-');   
+    let camelString = '';
 
-//    Map 
-//    Split using -
-//    capitalise first letter after split
-//    remove the lower case character and - (try replace function)
-//    turn it back into a string - join
+    for (let i = 0; i < csswords.length; i++) {
+        if (i === 0) {
+            camelString += csswords[i];
+        } else {
+            camelString += csswords[i][0].toUpperCase() + csswords[i].slice(1);
+        }
+    }
 
-// in each Array identify the first letter in each after the '-'
-let firstletterSecondword = 
-
-// capitalise this letter proceeding '-'
-function makeCapital(firstletterSecondword)
-
-//remove the '-'
-function 
-css.forEach(css) = forEach.css.splice( '-', )
-
-console.log(camelCase('margin-left')) 
+    return camelString;
 }
 
-// marginLeft console.log(camelCase('background-image')) 
-// // backgroundImage console.log(camelCase('display')) // display
+console.log(camelCase('margin-left'))
+console.log(camelCase('background-image'))
+console.log(camelCase('margin-top'))
+
+//  for/of loop
+
+// function camelCase(cssProp) {
+ 
+//   let words = cssProp.split('-');   
+ 
+//   let camelString = '';
+
+//   let isFirst = true;
+
+//   for (let word of words) {
+//     if (isFirst) {
+//       camelString += word;
+//       isFirst = false;
+//     } else {
+//       camelString += word[0].toUpperCase() + word.slice(1);
+//     }
+//   }
+
+//   return camelString;
+// }
+// console.log(camelCase("margin-left"));
+// console.log(camelCase("background-image"));
+// console.log(camelCase("margin-top"));
+
