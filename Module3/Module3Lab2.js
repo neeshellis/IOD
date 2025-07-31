@@ -87,7 +87,7 @@
 // console.log(camelCase('margin-top'))
 
 
-//  for loop
+//  for loop 
 function camelCase(cssProp) {
     let csswords = cssProp.split('-');   
     let camelString = '';

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-
+width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles3.css" />
+    <title>Module 1 Exercise 3</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="column" id="column1">
+            <h1 id="heading1">Hello</h1>
+            <br>
+            <text>Beautiful!</text>
+            <br>
+            <button onclick="changeColor1()">Change 1</button>
+            <script>
+                function changeColor1() {
+                    document.getElementById("column1").style.backgroundColor = "red"
+                    document.getElementById("heading1").style.color = "black"
+                    document.getElementById("column1").style.backgroundImage = "none";
+                }
+            </script>
+        </div>
+        <div class="column" id="column2">
+            <h1 id="heading2">World</h1>
+            <br>
+            <text>Stunning!</text>
+            <br>
+            <button onclick="changeColor2()">Change 2</button>
+            <script>
+                function changeColor2() {
+                    document.getElementById("column2").style.backgroundColor = "green"
+                    document.getElementById("heading2").style.color = "blue"
+                    document.getElementById("column2").style.backgroundImage = "none";
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

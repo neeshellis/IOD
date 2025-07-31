@@ -214,19 +214,76 @@
 // // console.log(user1.hasShortName()); // true
 
 //FIRST EXAMPLE USING A CLASSES INSTEAD OF THE TRADITIONAL CONSTRUCTOR FUNCTION
-class User {
-constructor(first, last) {
-this.first = first;
-this.last = last;
-}
+// class User {
+// constructor(first, last) {
+// this.first = first;
+// this.last = last;
+// }
 
-hasShortName() {
-return this.first.length >= 3
-}
-}
+// hasShortName() {
+// return this.first.length >= 3
+// }
+// }
 
-let user1 = new User('Tina', 'Smith') // need to use 'new'
-console.log(user1) // User { first: 'Tina', last: 'Smith' }
-console.log(user1.hasShortName()) // false
+// let user1 = new User('Tina', 'Smith') // need to use 'new'
+// console.log(user1) // User { first: 'Tina', last: 'Smith' }
+// console.log(user1.hasShortName()) // false
 
 // end of JS FUNDAMENTALS
+
+// const user = {
+// name: 'John'
+// }
+// console.log("User: " + user)
+// // User: [object Object]
+
+// const user = {
+// name: 'John',
+// toString() {
+// return this.name; // custom string value
+// }
+// }
+// console.log("User: " + user); // User: John
+
+// const apple = {
+// name: 'apple',
+// category: 'Granny Smith',
+// price: 2,
+// valueOf() { // without this special function, we can’t multiply the object below
+// return this.price; 
+// }
+// }
+
+// console.log(apple * 2) // 2.4
+
+// const r = 0xff;
+// const g = 0xff;
+// const b = 0xff;
+
+// const white = `rgb(${r}, ${g}, ${b})`
+// console.log(white) // rgb(255, 255, 255)
+
+// const mobile = 041234567
+// console.log(mobile) // 8730999 - decimal equivalent
+
+// const binary = 0b11111111 // binary form of 255
+// const octal = 0o377 // octal form of 255
+
+// console.log(binary) // 255
+// console.log(binary === octal) // true
+
+const ff = 255
+const ee = 238
+const dd = 221
+console.log(ff.toString(16)) // ff
+
+//convert from rgb colour code to hexadecimal
+console.log(`#${ff.toString(16)}${ee.toString(16)}${dd.toString(16)}`) // #ffeedd
+
+
+
+
+
+
+
+

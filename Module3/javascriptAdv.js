@@ -420,40 +420,285 @@
 // console.log(macbook._hardDiskType); // works, not recommended as it violates encapsulation principles
 // console.log(macbook.getHDiskType()); // recommended way to access protected property
 
-class Laptop {
-  _hardDiskType = "HDD"; // protected property, SHOULD only be used by inheriting classes
-  #numCPUFans = 1; // private property, CAN only be used internally by class methods
-  constructor(brand) {
-    // constructors are always public
-    this.brand = brand; // public property
-  }
-  isGaming() {
-    return false;
-  } // public method
-  getHDiskType() {
-    return this._hardDiskType;
-  } // public method to access protected property
-  _increaseCPUFans() {
-    // protected method
-    if (this.isGaming()) this.#numCPUFans++; // can access private properties internally
-  }
-}
-const macbook = new Laptop("Macbook Pro");
-// console.log(macbook.#numCPUFans); // error: private property is not accessible
+// class Laptop {
+//   _hardDiskType = "HDD"; // protected property, SHOULD only be used by inheriting classes
+//   #numCPUFans = 1; // private property, CAN only be used internally by class methods
+//   constructor(brand) {
+//     // constructors are always public
+//     this.brand = brand; // public property
+//   }
+//   isGaming() {
+//     return false;
+//   } // public method
+//   getHDiskType() {
+//     return this._hardDiskType;
+//   } // public method to access protected property
+//   _increaseCPUFans() {
+//     // protected method
+//     if (this.isGaming()) this.#numCPUFans++; // can access private properties internally
+//   }
+// }
+// const macbook = new Laptop("Macbook Pro");
+// // console.log(macbook.#numCPUFans); // error: private property is not accessible
 
-class GamingLaptop extends Laptop {
-  constructor(brand) {
-    super(brand); // public property, externally available to instances
-    this._hardDiskType = "SSD"; // protected props should be accessed by children, not instances
-    this.#numCPUFans = 2; // error: private property is not accessible
-    this._increaseCPUFans(); // use protected method to change #numCPUFans as it's internal
-  }
-  isGaming() {
-    return true;
-  } // public method
+// class GamingLaptop extends Laptop {
+//   constructor(brand) {
+//     super(brand); // public property, externally available to instances
+//     this._hardDiskType = "SSD"; // protected props should be accessed by children, not instances
+//     this.#numCPUFans = 2; // error: private property is not accessible
+//     this._increaseCPUFans(); // use protected method to change #numCPUFans as it's internal
+//   }
+//   isGaming() {
+//     return true;
+//   } // public method
+// }
+// const alienware = new GamingLaptop("Alienware");
+// //console.log(alienware.#numCPUFans) // error: private property is not accessible
+// console.log(alienware._hardDiskType); // no error: but protected property SHOULD NOT be accessed
+// console.log(alienware.getHDiskType()); // better: public method for accessing protected property
+
+// try {
+// const error = "mismatched quotes'
+// } catch (error) {
+// console.log('will not catch above error')
+// }
+// // SyntaxError: Invalid
+
+// try {
+// noSuchVariable;
+// } catch (error) { // error is just a variable name. 'error', 'err' or 'e' are all commonly used
+// console.log('caught an error: '+ error.message) // all errors have a message property
+// }
+// // caught an error: noSuchVariable is not defined
+// console.log('even though an error occurred above, it was caught so code continues');
+
+// try {
+// setTimeout( () => noSuchVariable, 1000 );
+// } catch (error) { // error is just a variable name. 'error', 'err' or 'e' are all commonly used
+// console.log('only synchronous errors! ' + error.message) // all errors have a message property
+// }
+// console.log('prints synchronous code then throws uncaught asynchronous error after 1 sec' );
+
+// function checkJson(json) { // checks json argument for validity and ensures a name property
+// try {
+// const user = JSON.parse(json); // parse string into object
+// if (!user.name) {
+// throw new SyntaxError("Incomplete data: no name"); // we can throw our own custom errors
+// }
+// return true; // returns true (valid json) if no error was thrown above
+// } catch (err) {
+// if (err instanceof SyntaxError) { // once caught, we can do specific things based on error type
+// console.log( "JSON Error: " + err.message );
+// } else {
+// throw err; // rethrow other non-syntax errors; invalid json will still cause a crash
+// }
+// }
+// finally {
+// console.log('at the end'); // always prints, even if returning true or throwing an error
+// // used to complete operations and perform cleanup regardless if we hit errors or not,
+// // eg. closing db connections, removing interval timers, cancelling event listeners, etc
+// }
+// return false; // returns false if any error occurred
+// }
+// checkJson('{"name": "Jhon"}');
+
+// promise.then( (result) => console.log(result), // prints if/when promise resolves successfully
+// (error) => console.error(error) ) // optional, prints if/when promises completes with error
+
+// promise.then( (result) => console.log(result), // prints if/when promise resolves successfully
+// (error) => console.error(error) ) // optional, prints if/when promises completes with error
+
+// const promise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("Promise resolved successfully after 1 second");
+//     }, 1000);
+// });
+
+// promise.then((result) => {
+//     console.log(result); // prints: Promise resolved successfully after 1 second
+// }).catch((error) => {
+//     console.error("Error:", error); // prints if promise is rejected
+// });
+
+// promise
+// .finally( () => console.log('promise is settled') ) // prints when promise settles
+// .then( (result) => console.log(result) ) // prints if/when promise resolves successfully
+// .catch( (error) => console.error(error) ) // prints if/when promises completes with error
+
+// const promiseReject = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         reject("Promise rejected successfully after 1 second");
+//     }, 1000);
+// });
+// promiseReject.then((result) => {
+//     console.log(result); // prints: Promise rejected successfully after 1 second
+// }).catch((error) => {
+//     console.error("Error:", error); // prints if promise is rejected
+// });
+
+//  PAGE 53
+// example promise. settles after 250ms with success or failure depending on random number
+// const promise = new Promise((resolve, reject) => { // resolve/reject are callback functions
+// if (Math.random() > 0.5) setTimeout( () => resolve('Random number ok'), 250 ) // success
+// else setTimeout( () => reject('Random number too low'), 250 ) // failure
+// })
+
+// promise // consume the promise by responding to outcomes when they happen
+// .finally( () => console.log('Wait is over, promise has settled.') ) // always prints
+// .then( (result) => console.log('Success! ' + result ) ) // prints resolve msg
+// .catch( (error) => console.log('Error! ' + error ) ) // prints reject msg
+
+//  page 54 VERY IMPORTANT
+
+// See AdvancedHTML.html file
+
+// page 55 Promises:chaining
+// let start = 10;
+// new Promise((resolve, reject) => {
+//   resolve(start); // resolve promise successfully with value of 10
+// })
+//   .then((result) => {
+//     // when resolve is called, it triggers .then()
+//     console.log(result);
+//     return result + start; // values returned from .then() are also promises
+//   })
+//   .then((result) => {
+//     // so we can chain them together
+//     console.log(result);
+//     return result + start; // increasing result by 10 each time
+//   })
+//   .then((result) => {
+//     // we can continue to chain them together
+//     console.log(result);
+//     return result + start; // increasing result by 10 each time
+//   });
+// prints 10, 20, 30
+
+
+// page 56
+// let start = 10;
+// new Promise((resolve) => setTimeout(() => resolve(start), start * 10))
+//   .then((result) => {
+//     // promise handler function inside .then()
+//     console.log(result);
+//     let next = result + start;
+//     return new Promise((resolve) => setTimeout(() => resolve(next), next * 10));
+//   })
+//   .then((result) => {
+//     // can explicitly return new promises
+//     console.log(result);
+//     let next = result + start;
+//     return new Promise((resolve) => setTimeout(() => resolve(next), next * 200));
+//   })
+//   .then((result) => {
+//     // which use the results of previously resolved promises in the chain
+//     console.log(result);
+//     let next = result + start;
+//     return new Promise((resolve) => setTimeout(() => resolve(next), next * 10));
+//   });
+// // prints 10, 20, 30, but with 100, 200 and 300ms delays in between
+
+// page 58
+
+// const promise = new Promise((resolve) => {
+// setTimeout( () => resolve('Simple successful promise'), 250 )
+// });
+
+// // using .then to process asynchronously:
+// promise.then(msg => console.log(msg));
+
+// // using await to process synchronously (if using await in a function it needs to be async):
+// let msg = await promise;
+// // console.log(msg);
+
+ 
+
+//  page59 Async means a function will always return a promise
+
+// async function asyncFunctionDeclaration() { ... } // function declaration syntax
+
+// const asyncFunctionExpression = async function() { ... } // function expression syntax
+
+// const asyncFunctionArrow = async () => { ... } // arrow function syntax
+
+// page 60
+
+// async function waitForPromise(promise) { // async function allows synchronous promise handling internally// since we have synchronous code and no .catch(), we use try ... catch for errors
+// try {
+// let promiseResult = await promise; // waits here as long as promise needs to resolve
+// console.log(`Success: ${promiseResult}`) // then continues executing other code
+// return true;
+// } catch(error) {
+// console.error(`Failure: ${error.message}`)
+// }
+// //only gets here if return true above did NOT happen, ie. there was an error
+// return false; // return false if promise was rejected
+// }
+
+// const successPromise = new Promise((resolve) => {
+// setTimeout(() => resolve('Promise resolved successfully'), 1000);
+// });
+
+// waitForPromise(successPromise)
+// waitForPromise() // call the async function to start waiting for the promise
+// .then(result => console.log(`Promise was ${result ? 'resolved' : 'rejected'}`)) // prints whether promise was resolved or rejected
+// .catch(error => console.error(`Error: ${error.message}`)); // catches any errors that were not handled inside the async functioon
+
+// PIZZA exercise
+// function declaration
+function startPreparing ()  {
+  setTimeout(() => {
+  console.log('Started preparing the pizza.....');
+  makeBase
+  }, 500)
 }
-const alienware = new GamingLaptop("Alienware");
-//console.log(alienware.#numCPUFans) // error: private property is not accessible
-console.log(alienware._hardDiskType); // no error: but protected property SHOULD NOT be accessed
-console.log(alienware.getHDiskType()); // better: public method for accessing protected property
+
+// function expression which gives a variable equal to the function (does the same thing)
+const makeBase = function()  {
+  setTimeout(() => {
+  console.log('Making the pizza base....');
+  addSauceAndCheese();
+},700)
+}
+
+// same result as above but uses => functions instead so no need to include the word 'function' 
+const addSauceAndCheese = ()  =>  {
+  setTimeout(() => {
+  console.log('Adding sauce and cheese ...');
+  addToppings();
+  },750)
+}
+
+const addToppings = ( ) =>  {
+setTimeout(() => {
+  console.log('Adding toppings....');
+  cookPizza();
+},800)
+}
+
+const cookPizza = function() {
+  setTimeout(() => {
+  console.log('Cooking the pizza...')
+  pizzaReady();
+  },1000)
+}
+
+function pizzaReady() {
+  setTimeout(() => {
+  console.log('Pizza is ready to eat!');
+  },1050)
+}
+
+
+startPreparing();
+
+async function makePizza() {
+  console.log('Started preparing pizza.....');
+  await makeBase();
+  await addSauceAndCheese();
+  await addToppings();
+  await cookPizza();
+  
+}
+makePizza()
 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>page title</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles3.css" />
+</head>
+
+<body>
+    <header>
+        <h1 id="header">Header</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Articles</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h2>Article heading</h2>
+            <p>Paragraph...</p>
+            <a href="https://www.google.com/">More
+                information...</a>
+            <form action="/action_page">
+                <div>
+                    <label for="firstName">First name:</label><br>
+                    <input type="text" id="firstName" name="firstName">
+                </div>
+                <div>
+                    <label for="lastName">Last name:</label><br>
+                    <input type="text" id="lastName" name="lastName">
+                </div>
+                <div>
+                    <label for="color">Colour:</label><br>
+                    <input type="text" id="color" name="color">
+                </div>
+                <br>
+                <input type="submit" value="Order Now">
+            </form>
+        </article>
+        <aside id="aside">
+            <h2>Related</h2>
+            <ul>
+                <li><a href="#">Article 1</a></li>
+                <li><a href="#">Article 2</a></li>
+            </ul>
+        </aside>
+    </section>
+    <footer>
+        <p>@copyright 2050 by nobody. all rights
+            reversed</p>
+    </footer>
+    <script>
+        document.getElementById("header").innerText =
+            'Hello JavaScript';
+        document.getElementById("aside").style.backgroundColor =
+            'green';
+    </script>
+</body>
+
+</html>
