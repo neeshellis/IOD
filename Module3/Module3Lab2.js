@@ -88,26 +88,26 @@
 
 
 //  for loop 
-function camelCase(cssProp) {
-    let csswords = cssProp.split('-');   
-    let camelString = '';
+// function camelCase(cssProp) {
+//     let csswords = cssProp.split('-');   
+//     let camelString = '';
 
-    for (let i = 0; i < csswords.length; i++) {
-        if (i === 0) {
-            camelString += csswords[i];
-        } else {
-            camelString += csswords[i][0].toUpperCase() + csswords[i].slice(1);
-        }
-    }
+//     for (let i = 0; i < csswords.length; i++) {
+//         if (i === 0) {
+//             camelString += csswords[i];
+//         } else {
+//             camelString += csswords[i][0].toUpperCase() + csswords[i].slice(1);
+//         }
+//     }
 
-    return camelString;
-}
+//     return camelString;
+// }
 
-console.log(camelCase('margin-left'))
-console.log(camelCase('background-image'))
-console.log(camelCase('margin-top'))
+// console.log(camelCase('margin-left'))
+// console.log(camelCase('background-image'))
+// console.log(camelCase('margin-top'))
 
-//  for/of loop
+//  for/of loop 
 
 // function camelCase(cssProp) {
  
@@ -132,3 +132,59 @@ console.log(camelCase('margin-top'))
 // console.log(camelCase("background-image"));
 // console.log(camelCase("margin-top"));
 
+
+
+
+5. 
+// let twentyCents = 0.20 
+// let tenCents = 0.10 
+// console.log(`${twentyCents} + ${tenCents} = ${twentyCents + tenCents}`) // 0.2 + 0.1 = 0.30000000000000004
+
+
+let twentyCents = 0.20 
+let tenCents = 0.10 
+
+let fixedTwenty = twentyCents.toFixed(2); 
+let fixedTen = tenCents.toFixed(2); 
+console.log(fixedTen)
+
+// // console.log(fixedTwenty + fixedTen) //why is this not working?
+
+// //because the fixed function is making the two decimals behave as strings
+
+// function currencyAddition(float1, float2) {
+//   let newNum1 = float1 * 100;
+//   let newNum2 = float2 * 100;
+// // return (newNum1 + newNum2)/100
+// }
+// console.log(currencyAddition(fixedTen, fixedTwenty))
+
+
+function currencyOperation (float1, float2, operation)  {
+
+    let newNum1 = float1 * 100;
+    let newNum2 = float2 * 100;
+    let result = 0
+switch (operation) {
+    case "+":
+     result = newNum1 + newNum2
+        break;
+    case "-":
+        result = newNum1 - newNum2
+        break;
+    case "/":
+        result = newNum1 / newNum2
+        break;
+    // case "multiplication"
+    // break;
+    default:
+        console.log("no match");
+}
+return result/100
+} 
+console.log(currencyOperation(0.1, 0.2, "+"))
+console.log(currencyOperation(0.1, 0.2, "-"))
+console.log(currencyOperation(0.1, 0.2, "/"))
+
+// console.log('the answer to the math is ${expr}.');
+// console.log(0.3 == currencyOperation(0.1, 0.2, '+'))
