@@ -141,12 +141,12 @@
 // console.log(`${twentyCents} + ${tenCents} = ${twentyCents + tenCents}`) // 0.2 + 0.1 = 0.30000000000000004
 
 
-let twentyCents = 0.20 
-let tenCents = 0.10 
+// let twentyCents = 0.20 
+// let tenCents = 0.10
 
-let fixedTwenty = twentyCents.toFixed(2); 
-let fixedTen = tenCents.toFixed(2); 
-console.log(fixedTen)
+// let fixedTwenty = twentyCents.toFixed(2); 
+// let fixedTen = tenCents.toFixed(2); 
+// console.log(fixedTen)
 
 // // console.log(fixedTwenty + fixedTen) //why is this not working?
 
@@ -160,31 +160,184 @@ console.log(fixedTen)
 // console.log(currencyAddition(fixedTen, fixedTwenty))
 
 
-function currencyOperation (float1, float2, operation)  {
+// function currencyOperation (float1, float2, operation)  {
 
-    let newNum1 = float1 * 100;
-    let newNum2 = float2 * 100;
-    let result = 0
-switch (operation) {
-    case "+":
-     result = newNum1 + newNum2
-        break;
-    case "-":
-        result = newNum1 - newNum2
-        break;
-    case "/":
-        result = newNum1 / newNum2
-        break;
-    // case "multiplication"
-    // break;
-    default:
-        console.log("no match");
-}
-return result/100
-} 
-console.log(currencyOperation(0.1, 0.2, "+"))
-console.log(currencyOperation(0.1, 0.2, "-"))
-console.log(currencyOperation(0.1, 0.2, "/"))
+//     let newNum1 = float1 * 100;
+//     let newNum2 = float2 * 100;
+//     let result = 0
+ 
+//     // numDecimals { }
+    
 
-// console.log('the answer to the math is ${expr}.');
+// // switch (operation) {
+//     case "+":
+//      result = newNum1 + newNum2
+//         break;
+//     case "-":
+//         result = newNum1 - newNum2
+//         break;
+//     case "/":
+//         result = newNum1 / newNum2
+//         break;
+//     case "*":
+//         result = newNum1 * newNum2
+//     case "decimals":
+//         break;
+//     default:
+//         console.log("no match");
+// }
+// return result/100
+// } 
+// console.log(currencyOperation(0.1, 0.2, "+"))
+// console.log(currencyOperation(0.1, 0.2, "-"))
+// console.log(currencyOperation(0.1, 0.2, "/"))
+
+// // console.log('the answer to the math is ${expr}.');
 // console.log(0.3 == currencyOperation(0.1, 0.2, '+'))
+
+// function currencyOperation2 (float1, float2, operation, numDecimals)  {
+
+//     let factor = 10**numDecimals;
+//     let newNum1 = float1 * factor;
+//     let newNum2 = float2 * factor;
+//     let result = 0
+
+// switch (operation) {
+//     case "+":
+//      result = newNum1 + newNum2
+//         break;
+//     case "-":
+//         result = newNum1 - newNum2
+//         break;
+//     case "/":
+//         result = newNum1 / newNum2
+//         break;
+//     case "*":
+//         result = newNum1 * newNum2
+//     case "decimals":
+//         break;
+//     default:
+//         console.log("no match");
+// }
+// return Math.round(result)/factor
+// } 
+
+// console.log(currencyOperation2(0.1005, 0.2, "+", 3))
+// console.log(currencyOperation2(0.123456, 0.2, "-", 4))
+// console.log(currencyOperation2(0.1, 0.2, "/", 5))
+
+// 6
+
+// const colours = ['red', 'green', 'blue', 'yellow', 'orange', 'red', 'blue', 'yellow'];
+// const testScores = [55, 84, 97, 63, 55, 32, 84, 91, 55, 43]
+// const testArray = ['red', 'green', 'blue', 'yellow', 'orange', 'red', 'blue', 'yellow', 55, 84, 97, 63, 55, 32, 84, 91, 55, 43]
+
+
+// // const duplicateArrays = colours.filter((colour, index) => colours.indexOf(colour) === index);
+// // console.log(duplicateArrays)
+
+// function unique(duplicateArray) {
+//     return duplicateArray.filter((colour, index) => duplicateArray.indexOf(colour) === index);
+// }
+
+// console.log(unique(colours))
+// console.log(unique(testScores))
+// console.log(unique(testArray))
+// // const testScores = [55, 84, 97, 63, 55, 32, 84, 91, 55, 43];
+// // const duplicateScores = testScores.filter((testScore, index) => testScores.valueOf(testScore) === index);
+
+// console.log(testScores)
+
+// const testScores = [55, 84, 97, 63, 55, 32, 84, 91, 55, 43]
+
+// 7
+// a
+// const books = [ { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', year: 1925 }, 
+//     { id: 2, title: 'To Kill a Mockingbird', author: 'Harper Lee', year: 1960 }, 
+//     { id: 3, title: '1984', author: 'George Orwell', year: 1949 }, 
+//     { id: 4, title: 'Brave New World', author: 'Aldous Huxley', year: 1932 }, 
+//     { id: 5, title: 'The Catcher in the Rye', author: 'J.D. Salinger', year: 1951 }, ];
+
+
+   
+// function getBookTitle(bookId) {
+//     return bookId.id === 1;
+// }
+
+// console.log(books.find(getBookTitle));
+
+// // b
+
+// function getOldBooks(books,year)  {
+//    return books.filter(function(book) {
+//     return book.year < year; });
+//    }
+//    const oldBooks = getOldBooks(books,1950);
+// console.log(oldBooks)
+    
+// c
+
+// function addGenre(books, newElement, newValue)  {
+
+//     const newArray = books.map(function(book) {
+//         return {
+//             ...book,
+//             [newElement]: newValue
+//         };
+//     });
+//     return newArray;
+// }
+
+// const newBookList = addGenre(books, "genre", "classic");
+
+
+// 8
+const phoneBookABC = new Map();   //an empty map to begin with
+phoneBookABC.set('Annabelle', '0412312343');
+phoneBookABC.set('Barry', '0433221117');
+phoneBookABC.set('Caroline', '0455221182');
+
+console.log(phoneBookABC)
+// a
+const phoneBookDEF = new Map()
+
+// b
+ 
+phoneBookDEF.set('David', '043125589') 
+phoneBookDEF.set('Elizabeth', '043218888') 
+phoneBookDEF.set('Fred', '041112222')
+
+console.log(phoneBookDEF)
+
+// c
+
+phoneBookABC.set('Caroline', '044444444');
+ console.log(phoneBookABC, phoneBookDEF)
+
+// d
+
+
+function printPhoneBook(contacts) {
+  
+    contacts.forEach(function(number, name)  {
+      console.log(name + ':' + number); })
+     }
+
+printPhoneBook(phoneBookABC)
+
+
+//   e
+
+ 
+const phoneBook = new Map([...phoneBookABC, ...phoneBookDEF]);
+console.log(phoneBook)
+
+//  f
+
+function printPhoneBook(updates) {
+  
+    updates.forEach(function(phoneNumber, name)  {
+      console.log(name + ':' + phoneNumber); })
+     }
+
+printPhoneBook(phoneBook)
