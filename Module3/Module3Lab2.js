@@ -292,52 +292,109 @@
 
 
 // 8
-const phoneBookABC = new Map();   //an empty map to begin with
-phoneBookABC.set('Annabelle', '0412312343');
-phoneBookABC.set('Barry', '0433221117');
-phoneBookABC.set('Caroline', '0455221182');
+// const phoneBookABC = new Map();   //an empty map to begin with
+// phoneBookABC.set('Annabelle', '0412312343');
+// phoneBookABC.set('Barry', '0433221117');
+// phoneBookABC.set('Caroline', '0455221182');
 
-console.log(phoneBookABC)
+// console.log(phoneBookABC)
+// // a
+// const phoneBookDEF = new Map()
+
+// // b
+ 
+// phoneBookDEF.set('David', '043125589') 
+// phoneBookDEF.set('Elizabeth', '043218888') 
+// phoneBookDEF.set('Fred', '041112222')
+
+// console.log(phoneBookDEF)
+
+// // c
+
+// phoneBookABC.set('Caroline', '044444444');
+//  console.log(phoneBookABC, phoneBookDEF)
+
+// // d
+
+
+// function printPhoneBook(contacts) {
+  
+//     contacts.forEach(function(number, name)  {
+//       console.log(name + ':' + number); })
+//      }
+
+// printPhoneBook(phoneBookABC)
+
+
+// //   e
+
+ 
+// const phoneBook = new Map([...phoneBookABC, ...phoneBookDEF]);
+// console.log(phoneBook)
+
+// //  f
+
+// function printPhoneBook(updates) {
+  
+//     updates.forEach(function(phoneNumber, name)  {
+//       console.log(name + ':' + phoneNumber); })
+//      }
+
+// printPhoneBook(phoneBook)
+
+
+// 9
+
+let salaries = {
+"Timothy" : 35000,
+"David" : 25000,
+"Mary" : 55000,
+"Christina" : 75000,
+"James" : 43000
+};
+
 // a
-const phoneBookDEF = new Map()
+
+function sumSalaries(salaries)  {
+
+  let totalSum = 0
+
+  for (const key in salaries) {
+  
+    totalSum = totalSum + salaries[key]
+        // console.log(`${key}: ${salaries[key]}`);
+    }
+
+return totalSum;
+}
+
+console.log(sumSalaries(salaries))
 
 // b
- 
-phoneBookDEF.set('David', '043125589') 
-phoneBookDEF.set('Elizabeth', '043218888') 
-phoneBookDEF.set('Fred', '041112222')
 
-console.log(phoneBookDEF)
+function topEarner(salaries)  {
 
-// c
+let highestSalary = 0
 
-phoneBookABC.set('Caroline', '044444444');
- console.log(phoneBookABC, phoneBookDEF)
+let highestPerson = ""
 
-// d
+for (const key in salaries) {
+  if (salaries[key] > highestSalary) {
+    highestSalary = salaries[key];
+   
+    highestEarner = key;
+}
+}
+return highestEarner
+}
 
-
-function printPhoneBook(contacts) {
-  
-    contacts.forEach(function(number, name)  {
-      console.log(name + ':' + number); })
-     }
-
-printPhoneBook(phoneBookABC)
+console.log (topEarner(salaries))
 
 
-//   e
 
- 
-const phoneBook = new Map([...phoneBookABC, ...phoneBookDEF]);
-console.log(phoneBook)
 
-//  f
+// 10
 
-function printPhoneBook(updates) {
-  
-    updates.forEach(function(phoneNumber, name)  {
-      console.log(name + ':' + phoneNumber); })
-     }
-
-printPhoneBook(phoneBook)
+// const today = new Date();
+// console.log('Current time is ' + today.toLocaleTimeString())
+// console.log(today.getHours() + ' hours have passed so far today')
