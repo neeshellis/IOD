@@ -11,18 +11,18 @@ const users = [
 // Add this new route into userRoutes.js:
 // a POST request with data sent in the body of the request,representing a new user
 
-router.post("/", (req, res) => {
+router.post('/', (req, res) => {
   let newUser = req.body; // first update index.js
+  console.log(newUser)
 
-  console.log(newUser);
   // we can add some validation as well
   if (!newUser.name || !newUser.country) {
     res.status(500).json({ error: "User must contain a name and country" });
     return;
   } else if (!newUser.id) {
-    // if no ID, generate one
-    newUser.id = users.length + 1;
+       newUser.id = users.length + 1;
   }
+
   // if the new user is valid, add them to the list
   users.push(newUser);
   res.status(200).json(newUser); // return the new user

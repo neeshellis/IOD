@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Module 5</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e3f2fd;
+        }
+
+        .news {
+            padding: 10px;
+            background:grey;
+
+        }
+
+        .news-id  {
+            font-weight: 700;
+            font-size = 3em;
+        }
+
+        .news-title {
+            font-weight: 600;
+            font-size: 2em;
+            padding: 0 0 10px 0;
+        }
+
+        .news-content {
+            font-weight: 400;
+            font-size: 2em
+        }
+    </style>
+</head>
+
+<body>
+    <template id="news-template">
+        <div class="news">
+            <div class="news-body">
+                <div class="news-id"></div>
+                <div class="news-title"></div>
+                <div class="news-content"></div>
+            </div>
+        </div>
+    </template>
+
+    <!-- <h1>Module 4 - Lab 5 - part 1</h1>
+    <div id="news-list"></div>
+<script>
+
+        
+      let news = [
+  { id: 1, title: "Election Results", content: "Newly elected minister..." },
+  { id: 2, title: "Sporting Success", content: "World Cup winners..." },
+  { id: 3, title: "Tornado Warning", content: "Residents should prepare..." },
+];
+
+
+        function addNews(id, title, content) {
+            console.log(id)
+            // clone the template
+            const template = document.getElementById("news-template").content.cloneNode(true);
+
+            // populate the template
+            template.querySelector('.news-id').innerText = id;
+            template.querySelector('.news-title').innerText = title;
+            template.querySelector('.news-content').innerText = content;
+           
+
+            // include the populated template into the page
+            document.querySelector('#news-list').appendChild(template);
+        }
+
+        
+        news.forEach(item => {
+            addNews(item.id, item.title, item.content);
+        });
+        
+    </script> -->
+
+     <h1>Module 4 - Lab 5 - part 2</h1>
+    <div id="news-list"></div>
+<script>
+
+        
+      let news = [
+  { id: 1, title: "Election Results", content: "Newly elected minister..." },
+  { id: 2, title: "Sporting Success", content: "World Cup winners..." },
+  { id: 3, title: "Tornado Warning", content: "Residents should prepare..." },
+];
+
+
+        function addNews(id, title, content) {
+            console.log(id)
+            // clone the template
+            const template = document.getElementById("news-template").content.cloneNode(true);
+
+            // populate the template
+            template.querySelector('.news-id').innerText = id;
+            template.querySelector('.news-title').innerText = title;
+            template.querySelector('.news-content').innerText = content;
+            
+            // clears the contents of the news-list each 5secs
+            document.querySelector('#news-list').innerHTML = '';
+
+            // include the populated template into the page
+            document.querySelector('#news-list').appendChild(template);
+           
+        }
+
+let currentIndex = 0;
+
+function displayNextNews() {
+    if (currentIndex < news.length) {
+        const item = news[currentIndex];
+        addNews(item.id, item.title, item.content);
+        currentIndex++;
+    }
+}
+
+// Display first news item immediately
+displayNextNews();
+
+// Set interval to display remaining news items every 5 seconds
+const newsInterval = setInterval(() => {
+    displayNextNews();
+    
+    // Stop when all items are displayed
+    if (currentIndex >= news.length) {
+        clearInterval(newsInterval);
+    }
+}, 5000);
+
+
+        
+        // news.forEach(item => {
+        //     addNews(item.id, item.title, item.content);
+        // });
+        
+    </script>
+
+
+</body>
+
+</html>
