@@ -35,8 +35,7 @@ h1 {
 }
 
 .navbar {
-  background-color: #83aed9;
-  background-color: hsla(80, 36%, 95%, 0.6) !important;
+  background-color: hsla(80, 36%, 95%, 0.6) !important; 
   position: fixed;
   top: 0;
   left: 0;
@@ -48,7 +47,7 @@ h1 {
 
 .container-sm-home {
   text-align: center;
-  width: 80%;
+  width: 60%;
   margin: auto;
   margin-top: 10em;
   padding: 2em;
@@ -60,10 +59,10 @@ h1 {
 
 .container-sm-pages {
   text-align: center;
-  width: 40%;
+  width: 30%;
   margin: auto;
   margin-top: 10em;
-  padding: 1em;
+  padding: .7em;
   background-color: hsla(80, 36%, 95%, 0.66);
   border-radius: 10px;
   background-size: auto;
@@ -109,12 +108,25 @@ img {
   float: center;
 }
 
+.container .col .video {
+  border-radius: 10px;
+  padding: 15em;
+  display: flex;
+  background-image: url("video/IMG_5089.mov");
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+video{
+  float: center;
+}
+
+
 .card {
   display: flex; 
   text-align: center;
   image: flex;
-  margin:15px 25px 15px 25px;
-  padding: 10px;
+  margin:15px 20% 15px 20%;
   background: hsla(80, 36%, 95%, 0.9);
   color: rgb(63, 85, 28);
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
@@ -140,4 +152,13 @@ img {
 .card-image {
   padding: 1rem;
   border-image: 5%;
+}
+
+.container-address .form  {
+   width: 80%;
+}
+
+iframe  {
+  display:flex
+  width: 50%;
 }

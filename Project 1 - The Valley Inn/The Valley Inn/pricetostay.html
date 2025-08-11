@@ -27,12 +27,14 @@
     <!-- My css -->
     <link rel="stylesheet" href="style.css">
 
+     <!-- script -->
+  <script src="scriptcards.js"></script>
 
     <title>The Cardrona Valley Inn</title>
 
 </head>
 
-<body class="pages">
+<body class="homepage">
 
     <!-- Scripts  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
@@ -68,58 +70,59 @@
     </head>
 
     <body>
+        <h1 class="title">The Cardrona Valley Inn</h1>
 
-    <div class="container-sm-pages">
-        <h3>Price to Stay</h3>
-    </div>
-
-    <template id="card-template">
-        <div class="card">
-            <div class="card-body">
-                <div class="card-title"></div>
-                <div class="card-description"></div>
-                <img class="card-image" width='300'>
-                <div class="card-price"></div>
-            </div>
+        <div class="container-sm-pages">
+            <h4>Price to Stay</h4>
         </div>
-    </template>
+
+        <template id="card-template">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title"></div>
+                    <div class="card-description"></div>
+                    <img class="card-image" width='300'>
+                    <div class="card-price"></div>
+                </div>
+            </div>
+        </template>
 
 
-    <div id="card-list"></div>
-    <script>
-        fetch('http://localhost:3000/pricingItems') // request data from this server// when it completes, access the JSON from the HTTP response sent by resolved promise
-            .then(response => response.json()) // .json() also returns a promise
-            .then(json => populate(json)) // log the returned JSON to the browser console
-            .catch(error => console.error(error)) // if there was an error, log that too
+        <div id="card-list"></div>
+        <!-- <script>
+            fetch('http://localhost:3000/pricingItems') // request data from this server// when it completes, access the JSON from the HTTP response sent by resolved promise
+                .then(response => response.json()) // .json() also returns a promise
+                .then(json => populate(json)) // log the returned JSON to the browser console
+                .catch(error => console.error(error)) // if there was an error, log that too
 
 
 
-        function addCard(title, description, image, price) {
-            // clone the template
-            const template = document.getElementById("card-template").content.cloneNode(true);
+            function addCard(title, description, image, price) {
+                // clone the template
+                const template = document.getElementById("card-template").content.cloneNode(true);
 
-            // populate the template
-            template.querySelector('.card-title').innerText = title;
-            template.querySelector('.card-description').innerText = description;
-            template.querySelector('.card-image').src = image;
-            template.querySelector('.card-image').alt = title;
-            template.querySelector('.card-price').innerText = price;
-
-
-            // include the populated template into the page
-            document.querySelector('#card-list').appendChild(template);
-        }
+                // populate the template
+                template.querySelector('.card-title').innerText = title;
+                template.querySelector('.card-description').innerText = description;
+                template.querySelector('.card-image').src = image;
+                template.querySelector('.card-image').alt = title;
+                template.querySelector('.card-price').innerText = price;
 
 
-        function populate(json) {
-            json.forEach(item => {
-                addCard(item.title, item.description, item.image, `$ ${item.price}`);
-            })
-        };
+                // include the populated template into the page
+                document.querySelector('#card-list').appendChild(template);
+            }
 
-    </script>
 
-    
-</body>
+            function populate(json) {
+                json.forEach(item => {
+                    addCard(item.title, item.description, item.image, `$ ${item.price}`);
+                })
+            };
+
+        </script> -->
+
+
+    </body>
 
 </html>
