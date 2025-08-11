@@ -1,0 +1,45 @@
+{
+  "pricingItems": [
+    {
+      "title": "Daily Rate",
+      "description": "Price per night for up to 2 guests",
+      "image": "Images/IMG_4809.jpg",
+      "price": 180
+    },
+
+    {
+      "title": "Additional Guests (max 2)",
+      "description": "Price for each additional guest per night",
+      "image": "Images/IMG_4802.jpg",
+      "price": 50
+    },
+
+    {
+      "title": "Bring your Doggie!",
+      "description": "Price per stay (must not chase livestock)",
+      "image": "Images/IMG_4631.jpg",
+      "price": 80
+    },
+
+    {
+      "title": "Airport Transfer",
+      "description": "Return fare to Queenstown Airport",
+      "image": "Images/airport-transfer.jpg",
+      "price": 120
+    },
+
+    {
+      "title": "Cheese Platter",
+      "description": "Cheese platter for two guests on arrival",
+      "image": "Images/cheese-platter-for-two.jpg",
+      "price": 40
+    },
+
+    {
+      "title": "Massage",
+      "description": "1hr Massage per guest at The Valley Inn",
+      "image": "Images/massage.jpeg",
+      "price": 80
+    }
+  ]
+}

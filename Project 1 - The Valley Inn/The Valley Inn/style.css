@@ -1,0 +1,143 @@
+/*  Page design*/
+
+.homepage {
+  background-image: url("Images/cardronavalleyinn.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  height: 100vh;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.pages {
+  background-color: #83aed9;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  color: rgb(63, 85, 28);
+  text-align: center;
+  font-weight: 500;
+  font-size: 33px;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 3px 5px rgb(248, 243, 243);
+  padding: 60px 25px  0px 25px
+}
+
+.navbar .nav-link {
+  color: rgb(63, 85, 28)!important; 
+  
+}
+
+.navbar {
+  background-color: #83aed9;
+  background-color: hsla(80, 36%, 95%, 0.6) !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  /* color: white; */
+  z-index: 1000;
+}
+
+.container-sm-home {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 10em;
+  padding: 2em;
+  background-color: hsla(80, 36%, 95%, 0.66);
+  border-radius: 10px;
+  background-size: auto;
+  color: rgb(63, 85, 28);
+}
+
+.container-sm-pages {
+  text-align: center;
+  width: 40%;
+  margin: auto;
+  margin-top: 10em;
+  padding: 1em;
+  background-color: hsla(80, 36%, 95%, 0.66);
+  border-radius: 10px;
+  background-size: auto;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+  color: rgb(63, 85, 28);
+}
+
+h6  {
+  font-size: large;
+  text-align: center;
+  text-decoration: underline;
+  margin: 15px; 
+}
+
+
+p {
+  color: rgb(54, 49, 49);
+}
+
+.container {
+  width: 100%;
+}
+
+.container .col {
+  background-color: rgb(238, 233, 233);
+  opacity: 0.9;
+  border-radius: 10px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 10px 25px 10px 25px;
+  width: 100%;
+}
+
+.container .col .image {
+  border-radius: 10px;
+  padding: 15em;
+  display: flex;
+  background-image: url("Images/IMG_4815.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+img {
+  float: center;
+}
+
+.card {
+  display: flex; 
+  text-align: center;
+  image: flex;
+  margin:15px 25px 15px 25px;
+  padding: 10px;
+  background: hsla(80, 36%, 95%, 0.9);
+  color: rgb(63, 85, 28);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1.2em;
+  padding: 0 0 10px 0;
+}
+
+.card-description {
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.card-price {
+  font-weight: 700;
+  font-size: 1.2em;
+  
+}
+
+.card-image {
+  padding: 1rem;
+  border-image: 5%;
+}
