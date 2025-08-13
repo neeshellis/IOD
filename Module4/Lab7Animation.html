@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>CSS Animation</title>
-<style>
-/* p { animation-name: slidein;
-animation-duration: 3s;
-animation-iteration-count: infinite; }
-@keyframes slidein {
-from { margin-left: 100%; }
-50% { font-size: 300%; margin-left: 40%; }
-to { margin-left: 0; }
-} */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
 
         .square {
-            width: 100px;  /* Set equal width and height for a square */
-            height: 100px; /* Set equal width and height for a square */
-            background-color: blue; /* Example background color */
-            border: 1px solid black; /* Optional: Add a border */
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: slideInOutWithColor 10s ease-in-out infinite;
         }
- </style>
+
+        @keyframes slideInOutWithColor {
+            0% {
+                top: -100px;
+                background-color: rgb(233, 233, 238);
+            }
+
+            25% {
+                top: calc(100vh - 100px);
+                background-color: rgb(159, 28, 185);
+            }
+
+            75% {
+                top: calc(100vh - 100px);
+                background-color: rgb(159, 28, 185);
+            }
+
+            100% {
+                top: -100px;
+                background-color: rgb(16, 122, 129);
+            }
+        }
+    </style>
 </head>
+
 <body>
+
+
     <div class="square"></div>
+
 </body>
+
 </html>
