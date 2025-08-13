@@ -228,27 +228,27 @@
 
 // 6
 
-// const colours = ['red', 'green', 'blue', 'yellow', 'orange', 'red', 'blue', 'yellow'];
-// const testScores = [55, 84, 97, 63, 55, 32, 84, 91, 55, 43]
-// const testArray = ['red', 'green', 'blue', 'yellow', 'orange', 'red', 'blue', 'yellow', 55, 84, 97, 63, 55, 32, 84, 91, 55, 43]
+const colours = ['red', 'green', 'blue', 'yellow', 'orange', 'red', 'blue', 'yellow'];
+const testScores = [55, 84, 97, 63, 55, 32, 84, 91, 55, 43]
+const testArray = ['red', 'green', 'blue', 'yellow', 'orange', 'red', 'blue', 'yellow', 55, 84, 97, 63, 55, 32, 84, 91, 55, 43]
 
 
-// // const duplicateArrays = colours.filter((colour, index) => colours.indexOf(colour) === index);
-// // console.log(duplicateArrays)
+const duplicateArrays = colours.filter((colour, index) => colours.indexOf(colour) === index);
+console.log(duplicateArrays)
 
-// function unique(duplicateArray) {
-//     return duplicateArray.filter((colour, index) => duplicateArray.indexOf(colour) === index);
-// }
+function unique(duplicateArray) {
+    return duplicateArray.filter((colour, index) => duplicateArray.indexOf(colour) === index);
+}
 
-// console.log(unique(colours))
-// console.log(unique(testScores))
-// console.log(unique(testArray))
-// // const testScores = [55, 84, 97, 63, 55, 32, 84, 91, 55, 43];
-// // const duplicateScores = testScores.filter((testScore, index) => testScores.valueOf(testScore) === index);
+console.log(unique(colours))
+console.log(unique(testScores))
+console.log(unique(testArray))
+// const testScores = [55, 84, 97, 63, 55, 32, 84, 91, 55, 43];
+// const duplicateScores = testScores.filter((testScore, index) => testScores.valueOf(testScore) === index);
 
-// console.log(testScores)
+console.log(testScores)
 
-// const testScores = [55, 84, 97, 63, 55, 32, 84, 91, 55, 43]
+const testScores = [55, 84, 97, 63, 55, 32, 84, 91, 55, 43]
 
 // 7
 // a
