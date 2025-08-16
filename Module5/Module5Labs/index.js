@@ -1,36 +1,42 @@
-const express = require("express"); // import the express package
-const calculatorRoutes = require("./routes/calculatorRoutes");
-const friendRoutes = require("./routes/friendRoutes");
+// const express = require("express"); // import the express package
 
-const app = express(); // create a new app
-const port = 3000; // unique 4 digit port
+// const calculatorRoutes = require('./routes/calculatorRoutes');
 
-// simple route
-app.get("/", (req, res) => {
-    res.json({ message: "Welcome to my Nodejs Connection application." });
-  });
+// const friendRoutes = require('./routes/friendRoutes');
 
-// parse requests of content-type - application/json
-app.use(express.json()); /* bodyParser.json() is deprecated */
+// const app = express(); // create a new app
+// const port = 3000; // unique 4 digit port
 
-// const app2 = express(); // create a new app
-// const port2 = 3001; // unique 4 digit port
+// // app.use(express.json())
 
-app.use("/", express.static('public'));
+// // app.use('/', express.static('public'))
 
-// app.get('/', (req, res) => {
-// res.send('Hello World!')
-// })
+// // // const app2 = express(); // create a new app
+// // // const port2 = 3001; // unique 4 digit port
 
-app.use("/calculator", calculatorRoutes);
+// // // app.get('/', (req, res) => {
+// // //   res.send('Hello World!')
+// // // })
 
-app.use("/friends", friendRoutes);
+// // app.use('/friends', friendRoutes);
 
-// starts the backend app on the given port
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+// // // map the calculator routes to our app
+// // app.use('/calculator', calculatorRoutes);
 
-// app2.listen(port2, () => {
-//   console.log(`Example app listening at http://localhost:${port2}`);
+// // starts the backend app on the given port
+// app.listen(port, () => {
+//     console.log(`Example app listening at http://localhost:${port}`);
 // });
+
+// // app2.listen(port2, () => {
+// //     console.log(`Example app listening at http://localhost:${port2}`);
+// // });
+
+// import the app
+const app = require('./app');
+const port = 3000
+
+// start the app to listen on the right port
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+})
