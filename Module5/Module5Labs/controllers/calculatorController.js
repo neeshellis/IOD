@@ -15,7 +15,7 @@ const addNumbers = (req, res) => {
 const subtractNumbers = (req, res) => {
   let number1 = parseInt(req.query.num1);
   let number2 = parseInt(req.query.num2);
-  let difference = number1 - number2;
+  let difference = myCalc.subtract(number1, number2);
   console.log(difference);
   res.status(200);
   res.json({ result: difference });
@@ -24,7 +24,7 @@ const subtractNumbers = (req, res) => {
 const divideNumbers = (req, res) => {
   let number1 = parseInt(req.query.num1);
   let number2 = parseInt(req.query.num2);
-  let fraction = number1 / number2;
+  let fraction = myCalc.divide(number1, number2);
   console.log(fraction);
   res.status(200);
   res.json({ result: fraction });
@@ -33,7 +33,7 @@ const divideNumbers = (req, res) => {
 const multiplyNumbers = (req, res) => {
   let number1 = parseInt(req.query.num1);
   let number2 = parseInt(req.query.num2);
-  let product = number1 * number2;
+  let product = myCalc.multiply(number1, number2);
   console.log(product);
   res.status(200);
   res.json({ result: product });
