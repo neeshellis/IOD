@@ -41,6 +41,7 @@ import "./App.css";
 import PropsDisplayer from './components/PropsDisplayer'; // up the top
 import City from "./components/City";
 import Pet from "./components/Pet";
+import Greeting from "./components/Greeting"
 
 
 // function ExampleComponent() {
@@ -71,14 +72,14 @@ import Pet from "./components/Pet";
 
 // componentBox class styles a component into a box
 // Welcome class identifies this component
-function Welcome(props) {
-return (
-<div className="componentBox">
-<h3>Welcome {props.name}!</h3>
-<h3 style={{color: 'blue', textTransform: 'uppercase'}}>Welcome!</h3>
-</div>
-)
-}
+// function Welcome(props) {
+// return (
+// <div className="componentBox">
+// <h3>Welcome {props.name}!</h3>
+// <h3 style={{color: 'blue', textTransform: 'uppercase'}}>Welcome!</h3>
+// </div>
+// )
+// }
 
 function App() {
   const [count, setCount] = useState(0);
@@ -100,7 +101,8 @@ function App() {
 
   return (
  
-    // <PropsDisplayer/>
+  // <PropsDisplayer/>
+
     // <PropsDisplayer myProp="first prop"/>
     // <PropsDisplayer prop1="first" prop2="second" prop3={3}/>
 
@@ -114,15 +116,22 @@ function App() {
 /* Everything in between <City> and </City> is passed as props.children
 */
 
+
 // <City name="Newcastle">
 // <div>Newcastle is a harbour city in the Australian state of New South
 // Wales.</div>
 // <div><strong>Population:</strong> 322,278 (2016)</div>
 // </City>
 
-<Pet type="dog" name="Rex" colour="brown" />
+// <Pet type="dog" name="Rex" colour="brown" /> */}
+// <Pet type="dog" name="Rex" colour="brown" /> */}
 
+<Greeting name="John">
+  <div> He was a short man that smoked continuously!</div>
+  <p><strong> He always fell asleep infront of the TV at night :)</strong></p>
+</Greeting>
 );
 }
 
 export default App;
+
