@@ -126,9 +126,9 @@ function App() {
 // <Pet type="dog" name="Rex" colour="brown" /> */}
 // <Pet type="dog" name="Rex" colour="brown" /> */}
 
-<Greeting name="John">
+<Greeting>
   <div> He was a short man that smoked continuously!</div>
-  <p><strong> He always fell asleep infront of the TV at night :)</strong></p>
+  <p><strong> He always fell asleep infront of the TV at night</strong></p>
 </Greeting>
 );
 }

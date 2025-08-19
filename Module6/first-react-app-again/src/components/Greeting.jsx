@@ -34,35 +34,37 @@
 
 //  Lab 1.3
 
-// function Greetings(props) {
-//   // convert object to string
+function Greetings(props) {
+  // convert object to string
 //   const stringProps = JSON.stringify(props);
-//   return (
-//     <div className="PropsDisplayer componentBox">
+  return (
+    <div className="PropsDisplayer componentBox">
     
-//       {/* <h3>{stringProps}</h3>  */}
-//     <p>'Hello {props.name}!'</p>
+      {/* <h3>{stringProps}</h3>  */}
+     {props.name ? <p>Hello: {props.name}</p> : <p>Hello World</p>} 
+   
       
-//     </div>
-//   );
-// }
-// // export this component so we can import it elsewhere
-// export default Greetings;
+    </div>
+  );
+}
+// export this component so we can import it elsewhere
+export default Greetings;
+
 
 
 // Lab 1.4
 
 
 // export this component so we can import it elsewhere
-function Greeting({name, surname = "Skinner", age = "72", children})  {
+// function Greeting({name, surname = "Skinner", age = "72", children})  {
 
-return (
-<div className="Greeting">
-<p>My Grandfather <strong>{name}</strong> had a surname <strong>{surname}</strong>, 
-<br/>his was {age} when he died </p>
-{children}
-</div>
-)
-}
-export default Greeting;
+// return (
+// <div className="Greeting">
+// <p>My Grandfather <strong>{name}</strong> had a surname <strong>{surname}</strong>, 
+// <br/>his was {age} when he died </p>
+// {children}
+// </div>
+// )
+// }
+// export default Greeting;
 
