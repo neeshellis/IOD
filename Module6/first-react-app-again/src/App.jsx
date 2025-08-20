@@ -41,7 +41,15 @@ import "./App.css";
 import PropsDisplayer from './components/PropsDisplayer'; // up the top
 import City from "./components/City";
 import Pet from "./components/Pet";
-import Greeting from "./components/Greeting"
+import Greeting from "./components/Greeting";
+import FullName from "./components/FullName"
+import ComplexComment from "./components/ComplexComment";
+import Comment from "./components/Comment";
+import {FancyBox, Callout} from "./components/FancyBox";
+import MoviesList from "./components/MoviesList";
+import Movie from "./components/Movie";
+import MoodChanger from "./components/MoodChanger";
+// import BigCats from ".componants/BigCats"
 
 
 // function ExampleComponent() {
@@ -81,25 +89,44 @@ import Greeting from "./components/Greeting"
 // )
 // }
 
+
 function App() {
   const [count, setCount] = useState(0);
 
-  const spiderman = {
-    name: "Spiderman",
-    alterEgo: "Peter Parker",
-    catchPhrase: "With great power comes great responsibility",
-  };
+// object storing comment data - passed as props;
+// const comment = {
+// date: new Date(),
+// text: 'I hope you enjoy learning React!',
+// author: // author is also an object.
+// name: 'Hello Kitty',
+// avatarUrl: 'https://placecats.com/g/64/64',
+// },
+// };
 
-  // single parent <div> element
-  const spideyJSX = (
-    <div>
-      <h3>{spiderman.name}</h3>
-      <blockquote>{spiderman.catchPhrase}</blockquote>
-      <cite>{spiderman.alterEgo}</cite>
-    </div>
-  );
+// const author = {
+// name: 'Hello Kitty',
+// avatarUrl: 'https://placecats.com/g/64/64',
+// },
 
-  return (
+
+return (
+
+  // const spiderman = {
+  //   name: "Spiderman",
+  //   alterEgo: "Peter Parker",
+  //   catchPhrase: "With great power comes great responsibility",
+  // };
+
+  // // single parent <div> element
+  // const spideyJSX = (
+  //   <div>
+  //     <h3>{spiderman.name}</h3>
+  //     <blockquote>{spiderman.catchPhrase}</blockquote>
+  //     <cite>{spiderman.alterEgo}</cite>
+  //   </div>
+  // );
+
+
  
   // <PropsDisplayer/>
 
@@ -124,12 +151,34 @@ function App() {
 // </City>
 
 // <Pet type="dog" name="Rex" colour="brown" /> */}
-// <Pet type="dog" name="Rex" colour="brown" /> */}
+//  <Pet type="dog" name="Rex" colour="brown" /> 
+// <Greeting>
+//   <div> He was a short man that smoked continuously!</div>
+//   <p><strong> He always fell asleep infront of the TV at night</strong></p>
+// </Greeting> //
 
-<Greeting>
-  <div> He was a short man that smoked continuously!</div>
-  <p><strong> He always fell asleep infront of the TV at night</strong></p>
-</Greeting>
+// <FullName first="Kendrick" last="Lamar" /> */}
+
+// {/* <ComplexComment author={comment.author}
+// date={comment.date}
+// text={comment.text}/> */}
+
+// {/* <Comment author={comment.author} date={comment.date} text={comment.text} /> */}
+
+// {/* <Comment author={author} text="randam text"  date={new Date()} /> */}
+
+// {/* render the Callout component with FullName as children /> */}
+
+// <Callout title="Nested React Component title"
+// message="Simple message with a fancy box applied via composition">
+// <FullName first="Elon" last="Musk" />
+// </Callout>
+
+
+// {/* <MoviesList /> */}
+
+<MoodChanger/>
+
 );
 }
 
