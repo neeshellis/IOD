@@ -49,7 +49,7 @@ import {FancyBox, Callout} from "./components/FancyBox";
 import MoviesList from "./components/MoviesList";
 import Movie from "./components/Movie";
 import MoodChanger from "./components/MoodChanger";
-// import BigCats from ".componants/BigCats"
+import BigCats from "./components/BigCats";
 
 
 // function ExampleComponent() {
@@ -177,10 +177,12 @@ return (
 
 // {/* <MoviesList /> */}
 
-<MoodChanger/>
+// < MoodChanger />
 
-);
+<BigCats />
+
+)
 }
 
-export default App;
+export default App
 
