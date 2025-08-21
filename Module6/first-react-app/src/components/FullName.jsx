@@ -10,7 +10,6 @@ Full name: <NamePart value={props.first} /> <NamePart value={props.last} />
 </div>
 )
 }
-
+// add the above to FullName.jsx, then export it and import into App.js
 
 export default FullName;
-// add the above to FullName.jsx, then export it and import into App.jsx

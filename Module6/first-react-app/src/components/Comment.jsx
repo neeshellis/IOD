@@ -1,7 +1,6 @@
-// simpler Comment component with the user info section extracted out into its own component
 import UserInfo from "./UserInfo";
 
-
+// simpler Comment component with the user info section extracted out into its own component
 function Comment(props) {
 return (
 <div className="Comment componentBox">
@@ -12,8 +11,6 @@ return (
 <div className="Comment-date">
 {props.date.toLocaleString()}
 </div>
-</div>
-)
-}
+</div>)}
 
 export default Comment;
