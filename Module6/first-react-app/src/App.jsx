@@ -13,6 +13,21 @@ import MoviesList from "./components/MoviesList";
 import MoodChanger from "./components/MoodChanger";
 import BirthdayTranslator from "./components/BirthdayTranslator";
 import Weather from "./components/Weather";
+import Greetings from "./components/Greeting";
+import BigCats from "./components/BigCats";
+import LoginForm from "./components/LoginForm";
+import Emoji from "./components/Emoji";
+import ExplodingBomb from "./components/ExplodingBomb"; 
+import AddCatForm from "./components/AddCatForm"
+import Clock from "./components/Clock"
+import ClockDisplay from "./components/Clock"
+import ActivityFinder from "./components/ActivityFinder";
+import WeatherProxy from "./components/WeatherApi";
+import RefCounter from "./components/RefCounter";
+import VideoPlayer from "./components/VideoPlayer";
+import ReducerCounter from "./components/ReducerCounter";
+import HelloNeesh from "./components/HelloNeesh";
+
 
 // // Add this in App.jsx ABOVE the App component
 // function ExampleComponent() {
@@ -103,11 +118,25 @@ function App() {
     //<ComplexComment author={comment.author}date={comment.date}text={comment.text}/>
     //<Comment author={author} text="random text" date={new Date()} />
     //<Callout title="Nested React Component title"message="Simple message with a fancy box applied via composition and styling"><FullName first="Elon" last="Musk" /></Callout>
-    <MoviesList />
-    // <MoodChanger />
+    //<MoviesList />
+    //</AddCatForm><MoodChanger />
     // <BirthdayTranslator />
     // <Weather />
-  );
+    //<BigCats/>
+    // <LoginForm/>
+    // <Emoji/>
+    //<AddCatForm />
+    //<ExplodingBomb />
+    //<Clock/>
+    //<ClockDisplay/>
+    //<ActivityFinder/>
+    //<WeatherProxy/>
+   //<RefCounter/>
+   //<VideoPlayer/>
+   //<ReducerCounter/>
+   <HelloNeesh/>
+  )
 }
+
 
 export default App;

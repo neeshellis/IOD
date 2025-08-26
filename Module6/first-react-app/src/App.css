@@ -39,7 +39,7 @@
 
 .componentBox { border: 1px solid #aaa; margin: 1em; color:white;
 padding: 1em; text-align: center; background:
-#656161; }
+#cf63b9; }
 
 .FancyBox { --mask: linear-gradient(#000 0 0) 50%/calc(100% - 37.00px)
 calc(100% - 37.00px) no-repeat,
@@ -52,4 +52,9 @@ background: linear-gradient(135deg, #1f005c, #5b0060, #870160,
 
 .read-the-docs {
   color: #888;
+}
+
+img {
+  max-width: 200px;
+  height: auto;
 }
