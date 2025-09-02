@@ -2,6 +2,12 @@ import { useState, useContext } from 'react';
 import { useUserContext } from "../context/UserContext";
 import { MyThemeContext } from "../context/MyThemeProvider";
 import ThemeToggleButton from "./ThemeToggleButton";
+import FormControl from '@mui/material/FormControl';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+
+
 
 function LoginForm() {
   const [userEmail, setUserEmail] = useState('');
@@ -35,17 +41,25 @@ return (
          style={{ background: theme.background, color: theme.foreground, padding: 16, borderRadius: 12 }}>
       <form onSubmit={handleSubmit} noValidate>
         <div className="formRow">
-          <label>Email Address:
-            <input type="email" value={userEmail} name="userEmail"
-                   onChange={(e) => setUserEmail(e.target.value)} required />
+          <label>
+            {/* <input /> */}
+                    <TextField id="outlined-basic" label="Email
+                    " variant="outlined" 
+                    type="email" value={userEmail} name="userEmail"
+                   onChange={(e) => setUserEmail(e.target.value)} required sx={{ backgroundColor: 'white', borderRadius: 3,color: 'black' }}/>
           </label>
+          <br></br>
+           <br></br>
         </div>
         <div className="formRow">
-          <label>Password:
-            <input type="password" value={userPassword} name="password"
-                   onChange={(e) => setUserPassword(e.target.value)} minLength={5} required />
+          <label>
+            <TextField id="outlined-basic" label="Password" variant="outlined"  
+                    type="email" value={userEmail} name="userEmail"
+                   onChange={(e) => setUserEmail(e.target.value)} required sx={{ backgroundColor: 'white', borderRadius: 3, color: 'black' }}/>
           </label>
+          <br></br>
         </div>
+        <br></br>
         <button type="submit">Log In</button>
         <p aria-live="polite">{submitResult}</p>
       </form>

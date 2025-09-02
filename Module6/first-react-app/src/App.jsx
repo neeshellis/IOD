@@ -26,7 +26,24 @@ import WeatherProxy from "./components/WeatherApi";
 import RefCounter from "./components/RefCounter";
 import VideoPlayer from "./components/VideoPlayer";
 import ReducerCounter from "./components/ReducerCounter";
-import HelloNeesh from "./components/HelloNeesh";
+import Calculator from "./components/Calculator";
+import BitcoinRates from "./components/BitcoinRates";
+import PostListReducer from "./components/PostListReducer";
+import SubscribeForm from "./components/SubscribeForm";
+import ActivityFinder2 from "./components/ActivityFinder2";
+import { UserProvider } from "./context/UserContext";
+import MyThemeProvider  from "./context/MyThemeProvider";
+import ThemeToggleButton from "./components/ThemeToggleButton";
+import NavBar from "./components/NavBar";
+import AppRoutes from "./routes/AppRoutes";
+import MyEmojiProvider from "./context/MyEmojiProvider";
+import CustomCard from "./components/CustomCard.jsx";
+import BasicGrid from "./components/BasicGrid.jsx";
+import MUIForm from "./components/MuiForm.jsx";
+import MUIDialog from "./context/MuiDialog.jsx";
+import BasicUsage from "./context/BasicUsage.jsx";
+import { ThemeProvider } from "@emotion/react";
+import { tealTheme } from "./themes/tealTheme.jsx";
 
 
 // // Add this in App.jsx ABOVE the App component
@@ -65,8 +82,8 @@ import HelloNeesh from "./components/HelloNeesh";
 // )
 // }
 
-function App() {
-  const [count, setCount] = useState(0);
+// function App() {
+//   const [count, setCount] = useState(0);
 
   // const spiderman = {
   //   name: "Spiderman",
@@ -95,7 +112,11 @@ function App() {
   // name: 'Hello Kitty',
   // avatarUrl: 'https://placecats.com/g/64/64'}
 
-  return (
+  function App() {
+
+   
+ // old componants
+    
     // <div className="App">{spideyJSX}</div>
     //  <ExampleComponent/>
     //  <Welcome name="students">
@@ -123,8 +144,8 @@ function App() {
     // <BirthdayTranslator />
     // <Weather />
     //<BigCats/>
-    // <LoginForm/>
-    // <Emoji/>
+    //<LoginForm/>
+     //<Emoji/>
     //<AddCatForm />
     //<ExplodingBomb />
     //<Clock/>
@@ -134,9 +155,43 @@ function App() {
    //<RefCounter/>
    //<VideoPlayer/>
    //<ReducerCounter/>
-   <HelloNeesh/>
-  )
+//<PostListReducer/>
+//<Calculator/>
+
+//<SubscribeForm/>
+//<ActivityFinder2/>
+
+//  return (
+//     <UserProvider>
+//     <MyThemeProvider>
+//       <NavBar />  
+//      <AppRoutes />
+//     </MyThemeProvider>
+//     </UserProvider>
+//
+
+//<BitcoinRates/>
+
+
+
+  // const [count, setCount] = useState(0)
+
+// return  (
+//   //  <ThemeProvider theme={tealTheme}>
+//   //   <CustomCard titles="some text"/>
+//   //   </ThemeProvider>
+
+     <MyEmojiProvider>
+      <Emoji /> 
+     
+     {/* <BasicGrid/> */}
+     {/* <MUIForm/> */}
+     {/* <MUIDialog text={"My First Mui Dialog"}/> */}
+    {/* <BasicUsage/> */}
+    {/* /<AppRoutes />  */}
+  
+   </MyEmojiProvider>
+
+)
 }
-
-
-export default App;
+export default App
