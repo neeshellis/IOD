@@ -181,15 +181,17 @@ import { tealTheme } from "./themes/tealTheme.jsx";
 //   //   <CustomCard titles="some text"/>
 //   //   </ThemeProvider>
 
-     <MyEmojiProvider>
-      <Emoji /> 
+     
      
      {/* <BasicGrid/> */}
      {/* <MUIForm/> */}
      {/* <MUIDialog text={"My First Mui Dialog"}/> */}
     {/* <BasicUsage/> */}
-    {/* /<AppRoutes />  */}
-  
+   {/* /<AppRoutes />  */}
+return  (
+
+  <MyEmojiProvider>
+      <Emoji /> 
    </MyEmojiProvider>
 
 )

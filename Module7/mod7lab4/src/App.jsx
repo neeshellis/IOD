@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+//import reactLogo from './assets/react.svg';
+//import viteLogo from '/vite.svg';
 import './App.css';
 import { UserProvider } from "./context/UserContext";
-import ThemeToggleButton from "./components/ThemeToggleButton";
+import ThemeToggleButton from './components/ThemeToggleButton';
 import NavBar from './components/NavBar';
 import AppRoutes from './routes/AppRoutes';
 import BitcoinRates from "./components/BitcoinRates";
