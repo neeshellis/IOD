@@ -22,6 +22,6 @@ function addCard(title, description, image, price) {
 
 function populate(json) {
   json.forEach((item) => {
-    addCard(item.title, item.description, item.image, `$ ${item.price}`);
+    addCard(item.title, item.description, item.image, `${item.price}`);
   });
 }
