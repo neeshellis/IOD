@@ -23,8 +23,7 @@ res.send({result: 500, error: err.message})
 }
 
 const updateUser = (req, res) => {
-// updates the user matching the ID from the param using JSON
-data POSTed in request body
+// updates the user matching the ID from the param using JSON data POSTed in request body
 console.log(req.body)
 Models.User.findByIdAndUpdate(req.params.id, req.body, { new:
 true })
