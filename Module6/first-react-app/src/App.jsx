@@ -113,7 +113,7 @@ import { tealTheme } from "./themes/tealTheme.jsx";
   // avatarUrl: 'https://placecats.com/g/64/64'}
 
   function App() {
-
+return  (
    
  // old componants
     
@@ -144,11 +144,12 @@ import { tealTheme } from "./themes/tealTheme.jsx";
     // <BirthdayTranslator />
     // <Weather />
     //<BigCats/>
-    //<LoginForm/>
+   // <LoginForm/>
      //<Emoji/>
     //<AddCatForm />
     //<ExplodingBomb />
     //<Clock/>
+    <LoginForm/>
     //<ClockDisplay/>
     //<ActivityFinder/>
     //<WeatherProxy/>
@@ -183,16 +184,16 @@ import { tealTheme } from "./themes/tealTheme.jsx";
 
      
      
-     {/* <BasicGrid/> */}
-     {/* <MUIForm/> */}
-     {/* <MUIDialog text={"My First Mui Dialog"}/> */}
-    {/* <BasicUsage/> */}
-   {/* /<AppRoutes />  */}
-return  (
+   //   {/* <BasicGrid/> */}
+   //   {/* <MUIForm/> */}
+   //   {/* <MUIDialog text={"My First Mui Dialog"}/> */}
+   //  {/* <BasicUsage/> */}
+   // {/* /<AppRoutes />  */}
 
-  <MyEmojiProvider>
-      <Emoji /> 
-   </MyEmojiProvider>
+
+//   <MyEmojiProvider>
+//       <Emoji /> 
+//    </MyEmojiProvider>
 
 )
 }
