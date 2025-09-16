@@ -16,7 +16,7 @@ type: DataTypes.STRING, allowNull: false
 lastName: {
 type: DataTypes.STRING, allowNull: false
 },
-emailId: {
+emailid: {
 type: DataTypes.STRING, allowNull: false, unique: true
 },
 password: {
