@@ -3,28 +3,49 @@ const { DataTypes, Model } = require("sequelize");
 let dbConnect = require("../dbConnect");
 
 const sequelizeInstance = dbConnect.Sequelize;
-class User extends Model { }
+class Likes extends Model { }
 // Sequelize will create this table if it doesn't exist on startup
-User.init({
+const User=require("./user");
+const Post=require("./post");
+const Comment=require("./comment");
+
+Likes.init({
 id: {
 type: DataTypes.INTEGER, allowNull: false, autoIncrement:
 true, primaryKey: true
 },
-firstName: {
-type: DataTypes.STRING, allowNull: false
-},
-lastName: {
-type: DataTypes.STRING, allowNull: false
-},
-emailId: {
-type: DataTypes.STRING, allowNull: false, unique: true
-},
-password: {
-type: DataTypes.STRING, allowNull: false
-}},
+userID: {
+        type: DataTypes.INTEGER, allowNull: true, required: false,
+        references: {
+            model: User, //reference to another model
+            key: "id", //column name of the referenced model
+            indexes: [{ unique: true }],
+        }
+    },
+postID: {
+        type: DataTypes.INTEGER, allowNull: true, required: false,
+        references: {
+            model: Post, //reference to another model
+            key: "id", //column name of the referenced model
+            indexes: [{ unique: true }],
+        }
+    },
+commentID: {
+        type: DataTypes.INTEGER, allowNull: true, required: false,
+        references: {
+            model: Comment, //reference to another model
+            key: "id", //column name of the referenced model
+            indexes: [{ unique: true }],
+        }
+    }},
 {
-sequelize: sequelizeInstance, modelName: 'likes', 
+sequelize: sequelizeInstance, modelName: 'comment', 
 timestamps: true, freezeTableName: true
 }
 )
-module.exports = User;
+module.exports = Comment;
+
+
+
+
+

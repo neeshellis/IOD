@@ -23,7 +23,7 @@ password: {
 type: DataTypes.STRING, allowNull: false
 }},
 {
-sequelize: sequelizeInstance, modelName: 'users', 
+sequelize: sequelizeInstance, modelName: 'user', 
 timestamps: true, freezeTableName: true
 }
 )

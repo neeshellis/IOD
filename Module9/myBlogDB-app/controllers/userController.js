@@ -42,5 +42,5 @@ res.send({result: 500, error: err.message})
 }
 
 module.exports = {
-getUsers, createUser, updateUser, deleteUser
+getUser, createUser, updateUser, deleteUser
 }
