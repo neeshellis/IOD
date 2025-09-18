@@ -9,8 +9,7 @@ class Post extends Model { }
 const User=require("./user");
 Post.init({
 id: {
-type: DataTypes.INTEGER, allowNull: false, autoIncrement:
-true, primaryKey: true
+type: DataTypes.INTEGER, allowNull: false, autoIncrement:true, primaryKey: true
 },
 userID: {
         type: DataTypes.INTEGER, allowNull: true, required: false,

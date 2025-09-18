@@ -1,6 +1,6 @@
 "use strict";
 const Models = require("../models");
-// finds all users in DB, then sends array as response
+// finds all CommentgetComment in DB, then sends array as response
 const getComment = (res) => {
 Models.Comment.findAll({}).then(data => {
 res.send({result: 200 , data: data});
@@ -42,5 +42,5 @@ res.send({result: 500, error: err.message})
 }
 
 module.exports = {
-getUsers, createUser, updateUser, deleteUser
+getComment, createComment, updateComment, deleteComment
 }

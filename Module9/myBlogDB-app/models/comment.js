@@ -8,11 +8,10 @@ class Comment extends Model { }
 const User=require("./user");
 const Post=require("./post");
 
-Post.init({
+Comment.init({
 
 id: {
-type: DataTypes.INTEGER, allowNull: false, autoIncrement:
-true, primaryKey: true
+type: DataTypes.INTEGER, allowNull: false, autoIncrement:true, primaryKey: true
 },
 userID: {
         type: DataTypes.INTEGER, allowNull: true, required: false,

@@ -1,7 +1,7 @@
 "use strict";
 const Models = require("../models");
 // finds all users in DB, then sends array as response
-const getUsers = (res) => {
+const getUser = (res) => {
 Models.User.findAll({}).then(data => {
 res.send({result: 200 , data: data});
 }).catch(err => {
