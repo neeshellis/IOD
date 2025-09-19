@@ -5,21 +5,21 @@ const Controllers = require("../controllers");
 // matches GET requests sent to /api/users
 // (the prefix from server.js)
 router.get('/', (req, res) => {
-Controllers.userController.getComment(res);
+Controllers.commentController.getComment(res);
 })
 
 // matches POST requests sent to /api/users/create
 router.post('/create', (req, res) => {
-Controllers.userController.createComment(req.body,
+Controllers.commentController.createComment(req.body,
 res)
 })
 
 router.put('/:id', (req, res) => {
-Controllers.userController.updateComment(req, res)
+Controllers.commentController.updateComment(req, res)
 })
 
 router.delete('/:id', (req, res) => {
-Controllers.userController.deleteComment(req, res)
+Controllers.commentController.deleteComment(req, res)
 })
 
 module.exports = router;

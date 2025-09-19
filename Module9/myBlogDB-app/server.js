@@ -19,8 +19,8 @@ app.use('/api/post', postRoutes);
 const commentRoutes = require('./routes/commentRoutes');
 app.use('/api/comment', commentRoutes);
 
-// let likesRoutes = require('./routes/likesRoutes');
-// app.use('/api/likes', likesRoutes);
+let likesRoutes = require('./routes/likesRoutes');
+app.use('/api/likes', likesRoutes);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8081;
